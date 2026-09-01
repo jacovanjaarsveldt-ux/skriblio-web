@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>skriblio</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+  :root { --cream:#F6F1E7; --cream2:#EFE8DA; --ink:#141414; --soft:#6E6A63; --yellow:#F2C230; --bad:#B9483B; --good:#4E7A4A; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family: ui-monospace, "SF Mono", Menlo, monospace; -webkit-font-smoothing:antialiased; }
+  main { max-width:420px; margin:0 auto; padding:64px 24px 48px; }
+  h1 { font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:36px; line-height:1.05; margin:20px 0 12px; }
+  p { font-size:14px; line-height:1.65; margin:0 0 12px; }
+  .soft { color:var(--soft); }
+  .card { background:rgba(255,255,255,.55); border:1px solid rgba(20,20,20,.08); border-radius:18px; padding:18px; margin:24px 0; }
+  label { display:block; font-size:12px; color:var(--soft); margin-bottom:6px; }
+  input { width:100%; font:inherit; font-size:16px; padding:14px; border-radius:12px; border:1px solid rgba(20,20,20,.12); background:var(--cream2); color:var(--ink); outline:none; }
+  input:focus { border-color:var(--yellow); }
+  button { width:100%; margin-top:14px; font:inherit; font-size:15px; padding:16px; border:0; border-radius:14px; background:var(--ink); color:var(--cream); cursor:pointer; }
+  button:disabled { opacity:.4; cursor:default; }
+  .err { color:var(--bad); }
+  .peel { width:56px; height:56px; image-rendering:pixelated; display:block; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="peel" viewBox="0 0 8 8" aria-hidden="true"><rect x="3" y="0" width="1" height="1" fill="#141414"/><rect x="2" y="1" width="1" height="2" fill="#F2C230"/><rect x="3" y="1" width="2" height="1" fill="#F2C230"/><rect x="1" y="3" width="1" height="2" fill="#F2C230"/><rect x="2" y="3" width="2" height="1" fill="#D9A400"/><rect x="1" y="5" width="2" height="1" fill="#F2C230"/><rect x="2" y="6" width="3" height="1" fill="#F2C230"/><rect x="4" y="5" width="2" height="1" fill="#F2C230"/><rect x="5" y="4" width="1" height="1" fill="#F2C230"/><rect x="3" y="7" width="1" height="1" fill="#141414"/></svg>
+
+  <section id="loading"><p class="soft">one moment.</p></section>
+
+  <section id="invalid" hidden>
+    <h1>that link is not one of mine.</h1>
+    <p class="soft">ask your friend to send it again from the app.</p>
+  </section>
+
+  <section id="ask" hidden>
+    <h1 id="hello"></h1>
+    <p id="intro"></p>
+    <p id="wording"></p>
+    <form class="card" id="f">
+      <label for="phone">your whatsapp number, with country code</label>
+      <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+27 82 000 0000" autocomplete="tel" required />
+      <button type="submit" id="go">ok, tell me if they stop</button>
+      <p class="err" id="err" hidden></p>
+    </form>
+    <p class="soft">nothing is stored until you tap the button. then only your number, the time, and the exact words above.</p>
+  </section>
+
+  <section id="done" hidden>
+    <h1 id="done-title"></h1>
+    <p id="done-body"></p>
+    <p class="soft">you can close this.</p>
+  </section>
+</main>
+
+<script>
+  // The API lives on Supabase. skriblio.com only hosts this page. Swap FN for prod.
+  const FN = document.currentScript.dataset.fn || "https://qrpoauexqrfcgiyimyxd.supabase.co/functions/v1/accept-invite";
+  const token = new URLSearchParams(location.search).get("token") || location.pathname.split("/").filter(Boolean).pop() || "";
+  const $ = (id) => document.getElementById(id);
+  const show = (id) => { for (const s of ["loading", "invalid", "ask", "done"]) $(s).hidden = s !== id; };
+
+  async function load() {
+    if (!token) return show("invalid");
+    const r = await fetch(`${FN}?token=${encodeURIComponent(token)}`, { headers: { accept: "application/json" } }).catch(() => null);
+    if (!r || !r.ok) return show("invalid");
+    const v = await r.json();
+    if (v.status === "accepted") return finished(v.friendName, v.banana);
+    $("hello").textContent = `hi ${v.friendName}. i am ${v.banana}.`;
+    $("intro").textContent = `i am a banana. i keep a journal with ${v.inviter}.`;
+    $("wording").textContent = v.wording;
+    $("f").dataset.wording = v.wording;
+    $("f").dataset.friend = v.friendName;
+    $("f").dataset.banana = v.banana;
+    show("ask");
+  }
+
+  function finished(friend, banana) {
+    $("done-title").textContent = `noted, ${friend}.`;
+    $("done-body").textContent = `${banana} will only write if your friend goes quiet for five days. at most once a week. reply mute to any message to stop.`;
+    show("done");
+  }
+
+  $("f").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = e.currentTarget, go = $("go"), err = $("err");
+    go.disabled = true; err.hidden = true;
+    const r = await fetch(FN, {
+      method: "POST",
+      headers: { "content-type": "application/json", accept: "application/json" },
+      body: JSON.stringify({ token, phone: $("phone").value, wording: f.dataset.wording }),
+    }).catch(() => null);
+    if (r && r.ok) return finished(f.dataset.friend, f.dataset.banana);
+    err.textContent = r && r.status === 400 ? "that number does not look right. include the country code." : "something went wrong. try again.";
+    err.hidden = false; go.disabled = false;
+  });
+
+  load();
+</script>
+</body>
+</html>
