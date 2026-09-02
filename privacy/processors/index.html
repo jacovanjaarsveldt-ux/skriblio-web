@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>skriblio, processors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+  :root { --cream:#F6F1E7; --cream2:#EFE8DA; --ink:#141414; --soft:#6E6A63; --yellow:#F2C230; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family: ui-monospace, "SF Mono", Menlo, monospace; -webkit-font-smoothing:antialiased; }
+  main { max-width:680px; margin:0 auto; padding:64px 24px 96px; }
+  h1 { font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:40px; line-height:1.05; margin:20px 0 24px; }
+  h2 { font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:24px; margin:36px 0 10px; }
+  h3 { font-size:14px; margin:24px 0 8px; }
+  p, li { font-size:14px; line-height:1.7; margin:0 0 12px; }
+  ul { padding-left:18px; margin:0 0 12px; }
+  a { color:var(--ink); text-decoration-color:var(--yellow); text-decoration-thickness:2px; }
+  code { background:var(--cream2); padding:1px 5px; border-radius:6px; font-size:13px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin:12px 0 20px; display:block; overflow-x:auto; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid rgba(20,20,20,.1); }
+  th { color:var(--soft); font-weight:400; }
+  .peel { width:56px; height:56px; image-rendering:pixelated; display:block; }
+  nav { font-size:12px; color:var(--soft); margin-top:48px; }
+  nav a { margin-right:14px; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="peel" viewBox="0 0 8 8" aria-hidden="true"><rect x="3" y="0" width="1" height="1" fill="#141414"/><rect x="2" y="1" width="1" height="2" fill="#F2C230"/><rect x="3" y="1" width="2" height="1" fill="#F2C230"/><rect x="1" y="3" width="1" height="2" fill="#F2C230"/><rect x="2" y="3" width="2" height="1" fill="#D9A400"/><rect x="1" y="5" width="2" height="1" fill="#F2C230"/><rect x="2" y="6" width="3" height="1" fill="#F2C230"/><rect x="4" y="5" width="2" height="1" fill="#F2C230"/><rect x="5" y="4" width="1" height="1" fill="#F2C230"/><rect x="3" y="7" width="1" height="1" fill="#141414"/></svg>
+<h1>processor register and retention schedule</h1>
+<p>POPIA section 21 (operators) and GDPR article 28 and 30 both want this table. Kept current by whoever adds a service. Published in short form at <a href="https://skriblio.com/privacy/processors">skriblio.com/privacy/processors</a>.</p>
+<h2>Processors (operators)</h2>
+<table><thead><tr><th>processor</th><th>what they receive</th><th>why</th><th>where</th><th>agreement</th></tr></thead><tbody>
+<tr><td>Supabase Inc</td><td>all account, journal, circle and consent data; photographs in the <code>vault</code> bucket</td><td>database, auth, storage, edge functions, cron</td><td>Frankfurt, Germany (project <code>skriblio-dev</code>, prod to follow in the same region)</td><td>Supabase DPA, accepted in the dashboard</td></tr>
+<tr><td>Anthropic PBC</td><td>photographs of journal pages, per request</td><td>handwriting transcription</td><td>United States</td><td>Anthropic commercial terms and DPA; no training on API inputs</td></tr>
+<tr><td>RevenueCat Inc</td><td>app user id, purchase receipts from Apple and Google</td><td>subscription status</td><td>United States</td><td>RevenueCat DPA</td></tr>
+<tr><td>Expo (650 Industries)</td><td>push token, notification payload (banana line only, never journal text)</td><td>push delivery to APNs and FCM</td><td>United States</td><td>Expo terms and DPA</td></tr>
+<tr><td>Apple Inc</td><td>purchase, push delivery</td><td>payments, notifications</td><td>worldwide</td><td>Apple developer agreement</td></tr>
+<tr><td>Google LLC</td><td>purchase, push delivery (FCM)</td><td>payments, notifications on Android</td><td>worldwide</td><td>Google Play developer agreement, Firebase terms</td></tr>
+<tr><td>Meta Platforms Ireland</td><td>friend WhatsApp number, template message with first names and the banana line</td><td>WhatsApp Business Cloud API</td><td>Ireland, United States</td><td>WhatsApp Business terms, Meta data processing terms</td></tr>
+<tr><td>PostHog Inc</td><td>user id, screen and event names, device type, app version</td><td>product analytics</td><td>EU host to be confirmed at project creation (default to EU)</td><td>PostHog DPA</td></tr>
+<tr><td>Functional Software Inc (Sentry)</td><td>crash stack traces, device model, OS, app version, user id</td><td>crash reporting</td><td>United States (or EU region at project creation)</td><td>Sentry DPA</td></tr>
+<tr><td>GitHub Inc</td><td>nothing personal; static pages only</td><td>hosts skriblio.com pages</td><td>United States</td><td>none needed, no personal data</td></tr>
+<tr><td>Resend Inc (planned)</td><td>email address, one time code</td><td>sign in mail from our domain</td><td>United States</td><td>Resend DPA, when created</td></tr>
+</tbody></table>
+<p>Not processors: Apple and Google as payment providers act as independent controllers for the payment itself.</p>
+<h2>What we never send anywhere</h2>
+<p>Journal text to any processor except Supabase (storage) and, as an image, Anthropic (transcription). Journal text never reaches push, analytics, crash reports or WhatsApp. <code>scripts/check-names.js</code> and the <code>_shared/push.ts</code> helper make this a code rule, not a promise.</p>
+<h2>Retention schedule</h2>
+<table><thead><tr><th>data</th><th>kept</th><th>then</th></tr></thead><tbody>
+<tr><td>account (email, ids)</td><td>life of the account</td><td>deleted on account deletion, same request</td></tr>
+<tr><td>journal entries, titles, ratings</td><td>life of the account</td><td>soft deleted entries purged after 30 days; all purged on account deletion</td></tr>
+<tr><td>photographs (originals and derived)</td><td>life of the entry</td><td>removed from storage on entry purge or account deletion (storage first, then rows)</td></tr>
+<tr><td>transcripts</td><td>life of the photograph</td><td>deleted with the photograph, or alone on request</td></tr>
+<tr><td>banana state, care log</td><td>life of the account</td><td>deleted on account deletion</td></tr>
+<tr><td>circle friend name and number</td><td>until removed or muted</td><td>purged 30 days after removal or mute</td></tr>
+<tr><td>consent record (number, time, wording, IP hash)</td><td>while in circle</td><td>purged 30 days after removal or mute</td></tr>
+<tr><td>silence streaks</td><td>rolling</td><td>rows older than 12 months purged by cron</td></tr>
+<tr><td>push token</td><td>until app uninstall or sign out</td><td>replaced on next sign in</td></tr>
+<tr><td>analytics events</td><td>12 months</td><td>PostHog retention setting</td></tr>
+<tr><td>crash reports</td><td>90 days</td><td>Sentry retention setting</td></tr>
+<tr><td>database backups</td><td>30 days rolling</td><td>Supabase point in time recovery window</td></tr>
+<tr><td>auth logs</td><td>90 days</td><td>Supabase default</td></tr>
+</tbody></table>
+<p>Cron jobs that implement the purges are part of milestone 10 (review readiness). Until then, deletion on request is manual through the Supabase dashboard and completes within the 30 day promise.</p>
+<h2>Sub-processors of processors</h2>
+<p>Each of the above publishes its own list (mostly AWS and Google Cloud). We rely on their DPAs for that layer.</p>
+<h2>Breach procedure</h2>
+<p>Within 24 hours of noticing: stop the leak, then work out what was reached. If personal data was likely accessed: notify the Information Regulator and affected users as soon as reasonably possible (POPIA s22), within 72 hours for EU and UK users (GDPR art 33). Template mail lives with this file when needed. Record every incident, even ones that turn out to be nothing, in <code>docs/legal/incidents.md</code>.</p>
+  <nav><a href="/privacy/">privacy</a><a href="/terms/">terms</a><a href="/privacy/processors/">processors</a><a href="mailto:info@skriblio.com">info@skriblio.com</a></nav>
+</main>
+</body>
+</html>

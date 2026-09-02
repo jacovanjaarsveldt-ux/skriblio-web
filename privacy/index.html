@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>skriblio, privacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+  :root { --cream:#F6F1E7; --cream2:#EFE8DA; --ink:#141414; --soft:#6E6A63; --yellow:#F2C230; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font-family: ui-monospace, "SF Mono", Menlo, monospace; -webkit-font-smoothing:antialiased; }
+  main { max-width:680px; margin:0 auto; padding:64px 24px 96px; }
+  h1 { font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:40px; line-height:1.05; margin:20px 0 24px; }
+  h2 { font-family:"Instrument Serif", Georgia, serif; font-weight:400; font-size:24px; margin:36px 0 10px; }
+  h3 { font-size:14px; margin:24px 0 8px; }
+  p, li { font-size:14px; line-height:1.7; margin:0 0 12px; }
+  ul { padding-left:18px; margin:0 0 12px; }
+  a { color:var(--ink); text-decoration-color:var(--yellow); text-decoration-thickness:2px; }
+  code { background:var(--cream2); padding:1px 5px; border-radius:6px; font-size:13px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin:12px 0 20px; display:block; overflow-x:auto; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid rgba(20,20,20,.1); }
+  th { color:var(--soft); font-weight:400; }
+  .peel { width:56px; height:56px; image-rendering:pixelated; display:block; }
+  nav { font-size:12px; color:var(--soft); margin-top:48px; }
+  nav a { margin-right:14px; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="peel" viewBox="0 0 8 8" aria-hidden="true"><rect x="3" y="0" width="1" height="1" fill="#141414"/><rect x="2" y="1" width="1" height="2" fill="#F2C230"/><rect x="3" y="1" width="2" height="1" fill="#F2C230"/><rect x="1" y="3" width="1" height="2" fill="#F2C230"/><rect x="2" y="3" width="2" height="1" fill="#D9A400"/><rect x="1" y="5" width="2" height="1" fill="#F2C230"/><rect x="2" y="6" width="3" height="1" fill="#F2C230"/><rect x="4" y="5" width="2" height="1" fill="#F2C230"/><rect x="5" y="4" width="1" height="1" fill="#F2C230"/><rect x="3" y="7" width="1" height="1" fill="#141414"/></svg>
+<h1>privacy notice</h1>
+<p>Draft. Effective on the day the app is first available in the stores. Published at <a href="https://skriblio.com/privacy">skriblio.com/privacy</a>.</p>
+<p>Skriblio is made by STEADY LABS (PTY) LTD, a company registered in South Africa ("we"). Questions and requests: <a href="mailto:info@skriblio.com">info@skriblio.com</a>. Our Information Officer under the Protection of Personal Information Act is the director of the company, reachable at the same address.</p>
+<p>This notice says what we collect, why, where it goes, how long we keep it, and what you can do about it. It is written to match what the app actually does. When the app changes, this changes with it, and the date at the top moves.</p>
+<h2>Who the app is for</h2>
+<p>Adults. You must be 18 or older to create an account. If we learn that someone under 18 has an account, we delete it.</p>
+<h2>What we collect and why</h2>
+<p><strong>Your account.</strong> Your email address, to sign you in with a one time code and to reach you about your account. We do not store a password.</p>
+<p><strong>Your journal.</strong> The text you write, photographs you attach, the date and time of each entry, an optional rating and an optional title. This is the product. We store it so it is there when you come back and so you can search it.</p>
+<p><strong>Transcripts of your photographs.</strong> When you attach a photograph of a handwritten page, we send the image to a vision model at Anthropic to turn the handwriting into text, so you can search it. The transcript is stored with the entry. Anthropic processes the image to return the text and, under our agreement with them, does not use it to train models. You can delete a transcript, or delete the photograph, at any time.</p>
+<p><strong>Your banana.</strong> Which character you picked, the name you gave it, and the date of your last entry. This drives what the banana says and when.</p>
+<p><strong>Your circle.</strong> If you choose to add friends, we store the names you type and, once a friend accepts, their WhatsApp number, the time they accepted, and the exact wording they agreed to. We use this only to send the notices described in the app: the first after five quiet days, then at most every four days, at most three times in one silence, and one message when you write again. Nothing about the content of your journal is ever sent to anyone.</p>
+<p><strong>Your friends' consent.</strong> When a friend opens your invite link and accepts, we record their number, the time, the words they agreed to, and a hashed form of their IP address. This is how we prove they agreed. A friend can stop all messages by replying "stop" or by asking you to remove them; both take effect immediately.</p>
+<p><strong>Subscription.</strong> Purchases go through Apple or Google. We never see your card. RevenueCat, our subscription service, tells us whether your subscription is active and until when. We store that date.</p>
+<p><strong>Device and usage.</strong> A push notification token so the banana can send you the occasional notice. Product analytics through PostHog: which screens you open and which buttons you tap, tied to your user id, so we can see what is confusing. Crash reports through Sentry when the app fails. No advertising identifiers, no advertising networks, no selling or sharing of data for advertising, ever.</p>
+<p><strong>Care log.</strong> A record of what the banana did and when: notices sent to you, messages sent to friends, when it stood down. Shown to you in the app.</p>
+<h2>Lawful basis (for readers in the EU and UK)</h2>
+<p>Performance of a contract for the journal, account, subscription and circle features you asked for. Consent for cloud transcription (you attach a photograph knowing it is transcribed; a dedicated consent card is coming with on-device transcription), for push notifications, and, on your friend's side, for receiving messages. Legitimate interest for crash reporting and product analytics, which you can object to by emailing us.</p>
+<h2>Where your data lives</h2>
+<p>Our database and file storage are with Supabase in Frankfurt, Germany. Images sent for transcription go to Anthropic in the United States for the duration of the request. RevenueCat, Expo (push delivery), PostHog and Sentry are in the United States or the EU depending on region; see the processor list at <a href="https://skriblio.com/privacy/processors">skriblio.com/privacy/processors</a>. Transfers out of South Africa and the EU rest on those providers' standard contractual clauses and data processing agreements.</p>
+<h2>Who sees your data</h2>
+<p>Us, to run the service and to help you when you write in. The processors above, each only for their one job. Nobody else, unless the law compels us, in which case we tell you if we are allowed to.</p>
+<h2>How long we keep it</h2>
+<p>Your journal, for as long as your account exists. Deleted entries are removed from your view immediately and purged from our database and storage within 30 days. Friend numbers, until you remove the friend or they stop, then purged after 30 days. Consent records, for as long as the friend is in your circle and 30 days after. Analytics events, 12 months. Crash reports, 90 days. When you delete your account, everything above is deleted, photographs first, then the account, which removes every row that belongs to it. Backups roll off within 30 days.</p>
+<h2>Your rights</h2>
+<p>You can export everything from inside the app (You, then Export) and from the subscription screen even after the trial ends. You can delete your account from inside the app; it is immediate and complete. You can ask us to correct something, to stop analytics for your account, or to tell you exactly what we hold, by emailing <a href="mailto:info@skriblio.com">info@skriblio.com</a>. We answer within 30 days. If you are unhappy with our answer you may complain to the Information Regulator of South Africa or, in the EU and UK, to your local supervisory authority.</p>
+<h2>Security</h2>
+<p>Data is encrypted in transit and at rest. Your journal is not end to end encrypted: our servers can read it, because transcription and search need to. Access is limited to the service and to the director of the company for support you ask for. You can lock the app with Face ID, Touch ID, or your device's equivalent.</p>
+<h2>Children</h2>
+<p>The service is for adults. We do not knowingly collect information from anyone under 18.</p>
+<h2>Changes</h2>
+<p>We post changes here with a new date and, for anything that changes what we collect or why, we tell you in the app before it applies.</p>
+  <nav><a href="/privacy/">privacy</a><a href="/terms/">terms</a><a href="/privacy/processors/">processors</a><a href="mailto:info@skriblio.com">info@skriblio.com</a></nav>
+</main>
+</body>
+</html>
