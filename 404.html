@@ -9,43 +9,75 @@
 <link rel="canonical" href="https://skriblio.com/404" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/icon-180.png" />
+<meta property="og:site_name" content="skriblio" />
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
 <meta property="og:title" content="skriblio, not here" />
 <meta property="og:description" content="nothing at this address." />
-<meta property="og:image" content="https://skriblio.com/assets/og.png" />
 <meta property="og:url" content="https://skriblio.com/404" />
-<meta property="og:type" content="website" />
+<meta property="og:image" content="https://skriblio.com/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="skriblio, not here" />
+<meta name="twitter:description" content="nothing at this address." />
+<meta name="twitter:image" content="https://skriblio.com/assets/og.png" />
+<meta name="twitter:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="theme-color" content="#F6EBD2" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+<link rel="preload" href="assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
 <link rel="stylesheet" href="site.css" />
 </head>
 <body>
-<div class="wrap">
+<a class="skip" href="#main">skip to content</a>
 <header class="top">
-  <a class="wordmark" href=""><img src="assets/ned.png" alt="" width="28" height="28" />skriblio</a>
-  <nav class="main"><a href="mac/">mac</a><a href="windows/">windows</a><a href="support/">support</a></nav>
+  <div class="in">
+    <a class="wordmark" href=""><img src="assets/ned.png" alt="" width="28" height="28" />skriblio</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+    <nav class="main" id="nav" aria-label="site">
+      <a href="mac/">mac</a>
+      <a href="windows/">windows</a>
+      <a href="support/">support</a>
+      <a href="download/">download</a>
+    </nav>
+  </div>
 </header>
+<main class="wrap" id="main">
 
-<section class="hero" style="padding-top:20px">
+<section class="hero tight" aria-labelledby="h">
   <div class="copy">
-    <h1>that page left.</h1>
+    <h1 id="h">that page left.</h1>
     <p class="lead">there is nothing here. the peel is a nice touch though.</p>
     <div class="badges"><a class="badge" href="./">home</a><a class="badge ghost" href="support/">support</a></div>
   </div>
-  <div class="art"><svg class="peel" style="width:160px;height:160px" viewBox="0 0 8 8" aria-hidden="true"><rect x="3" y="0" width="1" height="1" fill="#14110B"/><rect x="2" y="1" width="1" height="2" fill="#F2C230"/><rect x="3" y="1" width="2" height="1" fill="#F2C230"/><rect x="1" y="3" width="1" height="2" fill="#F2C230"/><rect x="2" y="3" width="2" height="1" fill="#D9A400"/><rect x="1" y="5" width="2" height="1" fill="#F2C230"/><rect x="2" y="6" width="3" height="1" fill="#F2C230"/><rect x="4" y="5" width="2" height="1" fill="#F2C230"/><rect x="5" y="4" width="1" height="1" fill="#F2C230"/><rect x="3" y="7" width="1" height="1" fill="#14110B"/></svg></div>
+  <div class="art"><svg class="peel big" viewBox="0 0 8 8" aria-hidden="true"><rect x="3" y="0" width="1" height="1" fill="#14110B"/><rect x="2" y="1" width="1" height="2" fill="#F2C230"/><rect x="3" y="1" width="2" height="1" fill="#F2C230"/><rect x="1" y="3" width="1" height="2" fill="#F2C230"/><rect x="2" y="3" width="2" height="1" fill="#D9A400"/><rect x="1" y="5" width="2" height="1" fill="#F2C230"/><rect x="2" y="6" width="3" height="1" fill="#F2C230"/><rect x="4" y="5" width="2" height="1" fill="#F2C230"/><rect x="5" y="4" width="1" height="1" fill="#F2C230"/><rect x="3" y="7" width="1" height="1" fill="#14110B"/></svg></div>
 </section>
 
+</main>
 <footer class="bottom">
-  <nav>
-    <a href="privacy/">privacy</a>
-    <a href="terms/">terms</a>
-    <a href="support/">support</a>
-    <a href="download/">download</a>
-    <a href="mailto:info@skriblio.com">info@skriblio.com</a>
-  </nav>
-  <div>skriblio is made by steady labs (pty) ltd, south africa. for adults, 18 and over.</div>
+  <div class="wrap">
+    <nav aria-label="footer">
+      <a href="privacy/">privacy</a>
+      <a href="terms/">terms</a>
+      <a href="support/">support</a>
+      <a href="download/">download</a>
+      <a href="mac/">mac</a>
+      <a href="windows/">windows</a>
+      <a href="mailto:info@skriblio.com">info@skriblio.com</a>
+    </nav>
+    <p>skriblio is made by steady labs (pty) ltd, south africa. for adults, 18 and over.</p>
+    <p>journal, or the banana tells.</p>
+  </div>
 </footer>
-</div>
+<script>
+(function(){var b=document.querySelector(".menu"),n=document.getElementById("nav");if(!b||!n)return;
+document.documentElement.classList.add("js");
+b.addEventListener("click",function(){var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));n.classList.toggle("open",!o);b.textContent=o?"menu":"close";});
+n.addEventListener("click",function(e){if(e.target.tagName==="A"){b.setAttribute("aria-expanded","false");n.classList.remove("open");b.textContent="menu";}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&n.classList.contains("open")){b.click();b.focus();}});})();
+</script>
 </body>
 </html>

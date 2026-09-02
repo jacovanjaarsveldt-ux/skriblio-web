@@ -4,115 +4,196 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>skriblio, journal or the banana tells</title>
-<meta name="description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose." />
-
+<meta name="description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose. two weeks free." />
 <link rel="canonical" href="https://skriblio.com/" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/icon-180.png" />
-<meta property="og:title" content="skriblio, journal or the banana tells" />
-<meta property="og:description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose." />
-<meta property="og:image" content="https://skriblio.com/assets/og.png" />
-<meta property="og:url" content="https://skriblio.com/" />
+<meta property="og:site_name" content="skriblio" />
+<meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
+<meta property="og:title" content="skriblio, journal or the banana tells" />
+<meta property="og:description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose. two weeks free." />
+<meta property="og:url" content="https://skriblio.com/" />
+<meta property="og:image" content="https://skriblio.com/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="skriblio, journal or the banana tells" />
+<meta name="twitter:description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose. two weeks free." />
+<meta name="twitter:image" content="https://skriblio.com/assets/og.png" />
+<meta name="twitter:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="theme-color" content="#F6EBD2" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+<link rel="preload" href="assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
 <link rel="stylesheet" href="site.css" />
 </head>
-<body>
-<div class="wrap">
+<body class="home">
+<a class="skip" href="#main">skip to content</a>
 <header class="top">
-  <a class="wordmark" href=""><img src="assets/ned.png" alt="" width="28" height="28" />skriblio</a>
-  <nav class="main"><a href="mac/">mac</a><a href="windows/">windows</a><a href="support/">support</a></nav>
+  <div class="in">
+    <a class="wordmark" href=""><img src="assets/ned.png" alt="" width="28" height="28" />skriblio</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+    <nav class="main" id="nav" aria-label="site">
+      <a href="mac/">mac</a>
+      <a href="windows/">windows</a>
+      <a href="support/">support</a>
+      <a href="download/">download</a>
+    </nav>
+  </div>
 </header>
+<main class="wrap" id="main">
 
-<section class="hero">
+<section class="hero" aria-labelledby="h">
   <div class="copy">
-    <h1>journal, or the banana tells.</h1>
-    <p class="lead">a paid journal with a pixel banana in it. write, or photograph the page and we type it up. if you stop for five days, the banana tells a friend you picked. they have to agree first.</p>
-    <div class="badges">
-      <a class="badge" href="download/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg> app store</a>
-      <a class="badge" href="download/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg> google play</a>
-    </div>
-    <div class="fine">two weeks free. then $49.99 a year or $9.99 a month. mac and windows included.</div>
+    <h1 id="h">journal, or the banana tells.</h1>
+    <p class="lead">a paid journal with a pixel banana in it. write, or photograph the page and skriblio types it up. stop for five days and the banana tells a friend you picked. they have to say yes first.</p>
+    <div class="badges"><span class="badge soon" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg><span>app store</span><small>soon</small></span><span class="badge soon" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg><span>google play</span><small>soon</small></span></div>
+    <p class="fine">two weeks free. then $49.99 a year or $9.99 a month, one price everywhere. mac and windows included.</p>
   </div>
-  <div class="art"><img src="assets/ned.png" alt="ned, a pixel banana, standing" width="320" height="320" /></div>
+  <div class="art"><img src="assets/ned.png" alt="ned, a round pixel banana, standing with a flat mouth" width="256" height="256" fetchpriority="high" /></div>
 </section>
 
-<section>
-  <h2>how it works</h2>
-  <div class="grid3">
-    <div class="glass"><div class="n">one</div><h3>write anything</h3><p>two minutes is enough. or take a photo of the paper page. the handwriting becomes searchable text, the photo stays in your vault.</p></div>
-    <div class="glass"><div class="n">two</div><h3>the banana keeps count</h3><p>it changes when you write and when you do not. a widget, one line, no streaks, no badges, no red dots.</p></div>
-    <div class="glass"><div class="n">three</div><h3>the circle</h3><p>pick up to five friends. after five quiet days the banana sends one whatsapp message. then every four days, three at most. it stops the moment you write.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>pick your banana</h2>
-  <div class="cast">
-    <figure><img src="assets/ned.png" alt="ned" width="84" height="84" /><figcaption><b>ned</b>the plain one</figcaption></figure>
-    <figure><img src="assets/coat.png" alt="coat" width="84" height="84" /><figcaption><b>coat</b>hands in the peel</figcaption></figure>
-    <figure><img src="assets/post.png" alt="post" width="84" height="84" /><figcaption><b>post</b>stands very still</figcaption></figure>
-    <figure><img src="assets/dale.png" alt="dale" width="84" height="84" /><figcaption><b>dale</b>has a plan</figcaption></figure>
-    <figure><img src="assets/brick.png" alt="brick" width="84" height="84" /><figcaption><b>brick</b>does not flinch</figcaption></figure>
-    <figure><img src="assets/husk.png" alt="husk" width="84" height="84" /><figcaption><b>husk</b>seen things</figcaption></figure>
-    <figure><img src="assets/kit.png" alt="kit" width="84" height="84" /><figcaption><b>kit</b>small, loud</figcaption></figure>
-    <figure><img src="assets/moe.png" alt="moe" width="84" height="84" /><figcaption><b>moe</b>tired</figcaption></figure>
-    <figure><img src="assets/shush.png" alt="shush" width="84" height="84" /><figcaption><b>shush</b>will not say</figcaption></figure>
-    <figure><img src="assets/sit.png" alt="sit" width="84" height="84" /><figcaption><b>sit</b>sitting this out</figcaption></figure>
-  </div>
-</section>
-
-<section>
-  <div class="gone">
+<section class="scene" aria-labelledby="gone-h">
+  <div class="room">
     <svg class="peel" viewBox="0 0 8 8" aria-hidden="true"><rect x="3" y="0" width="1" height="1" fill="#14110B"/><rect x="2" y="1" width="1" height="2" fill="#F2C230"/><rect x="3" y="1" width="2" height="1" fill="#F2C230"/><rect x="1" y="3" width="1" height="2" fill="#F2C230"/><rect x="2" y="3" width="2" height="1" fill="#D9A400"/><rect x="1" y="5" width="2" height="1" fill="#F2C230"/><rect x="2" y="6" width="3" height="1" fill="#F2C230"/><rect x="4" y="5" width="2" height="1" fill="#F2C230"/><rect x="5" y="4" width="1" height="1" fill="#F2C230"/><rect x="3" y="7" width="1" height="1" fill="#14110B"/></svg>
-    <h2>you did not write. ned left.</h2>
-    <div class="speech">the peel stays. so does the door. write once and it comes back.</div>
+    <h2 id="gone-h">day five. ned left.</h2>
+    <p class="speech">the peel stays. so does the door. write once and it comes back.</p>
   </div>
+  
+<figure class="phone">
+  <div class="phone-top"><svg class="peel" viewBox="0 0 8 8" aria-hidden="true"><rect x="3" y="0" width="1" height="1" fill="#14110B"/><rect x="2" y="1" width="1" height="2" fill="#F2C230"/><rect x="3" y="1" width="2" height="1" fill="#F2C230"/><rect x="1" y="3" width="1" height="2" fill="#F2C230"/><rect x="2" y="3" width="2" height="1" fill="#D9A400"/><rect x="1" y="5" width="2" height="1" fill="#F2C230"/><rect x="2" y="6" width="3" height="1" fill="#F2C230"/><rect x="4" y="5" width="2" height="1" fill="#F2C230"/><rect x="5" y="4" width="1" height="1" fill="#F2C230"/><rect x="3" y="7" width="1" height="1" fill="#14110B"/></svg><span><b>skriblio banana</b><small>whatsapp</small></span></div>
+  <div class="bubble">hi maya. this is sam's banana. sam has not written in 5 days. no pressure. maybe ask how they are. reply mute to stop these.<time>20:31</time></div>
+  <figcaption>the whole message. no entry, no mood, no count beyond the days.</figcaption>
+</figure>
 </section>
 
-<section>
-  <h2>what the friend gets</h2>
-  <ul class="rules">
-    <li>only that you have not written for a few days. never what you wrote. never a mood.</li>
-    <li>only after they say yes on a page like this one, with the exact words recorded.</li>
-    <li>at most three messages in one silence, four days apart, then one when you are back.</li>
-    <li>they reply stop, it stops. you remove them, it stops. you pause the circle for a month, it waits.</li>
+<section aria-labelledby="how-h">
+  <h2 id="how-h">how it works</h2>
+  <ol class="steps">
+    <li><span class="n">one</span><h3>write anything</h3><p>two minutes is enough. or photograph the paper page. the handwriting becomes text you can search, and the photo stays in your vault.</p></li>
+    <li><span class="n">two</span><h3>the banana keeps count</h3><p>seven states, from here to gone, set by the days since your last save. a widget shows it with one line. no streaks, no badges, no red dots.</p></li>
+    <li><span class="n">three</span><h3>the circle</h3><p>pick up to five friends. after five quiet days the banana sends one plain message. then every four days, three at most. it stops the moment you write.</p></li>
+  </ol>
+  <ol class="states" aria-label="the seven states">
+    <li><span class="when">day 0</span><b>here</b><span class="say">good. day 12.</span></li>
+    <li><span class="when">day 1</span><b>waiting</b><span class="say">no rush.</span></li>
+    <li><span class="when">day 2 to 3</span><b>restless</b><span class="say">i am fine. this is fine.</span></li>
+    <li><span class="when">day 4</span><b>rogue</b><span class="say">i am packing.</span></li>
+    <li><span class="when">day 5</span><b>gone</b><span class="say">ned left. this is on you.</span></li>
+    <li><span class="when">first save</span><b>back</b><span class="say">i came back. do not make it a thing.</span></li>
+    <li><span class="when">writing</span><b>listening</b></li>
+  </ol>
+</section>
+
+<section aria-labelledby="cast-h">
+  <h2 id="cast-h">pick your banana</h2>
+  <p class="lead sub">ten of them. one is yours. you can change later, unless a friend has just been told.</p>
+  <ul class="cast">
+    <li><img src="assets/coat.png" alt="coat, a pixel banana" width="128" height="128" loading="lazy" /><b>coat</b><span>hands in the peel</span></li>
+    <li><img src="assets/dale.png" alt="dale, a pixel banana" width="128" height="128" loading="lazy" /><b>dale</b><span>square glasses, blank</span></li>
+    <li><img src="assets/sit.png" alt="sit, a pixel banana" width="128" height="128" loading="lazy" /><b>sit</b><span>prefers the floor</span></li>
+    <li><img src="assets/husk.png" alt="husk, a pixel banana" width="128" height="128" loading="lazy" /><b>husk</b><span>half out already</span></li>
+    <li><img src="assets/brick.png" alt="brick, a pixel banana" width="128" height="128" loading="lazy" /><b>brick</b><span>a plantain. not cute</span></li>
+    <li><img src="assets/post.png" alt="post, a pixel banana" width="128" height="128" loading="lazy" /><b>post</b><span>carries the mail bag</span></li>
+    <li><img src="assets/moe.png" alt="moe, a pixel banana" width="128" height="128" loading="lazy" /><b>moe</b><span>the monk</span></li>
+    <li><img src="assets/ned.png" alt="ned, a pixel banana" width="128" height="128" loading="lazy" /><b>ned</b><span>round. has had enough</span></li>
+    <li><img src="assets/shush.png" alt="shush, a pixel banana" width="128" height="128" loading="lazy" /><b>shush</b><span>the librarian</span></li>
+    <li><img src="assets/kit.png" alt="kit, a pixel banana" width="128" height="128" loading="lazy" /><b>kit</b><span>lying down. on purpose</span></li>
   </ul>
 </section>
 
-<section class="desk">
+<section class="split" aria-labelledby="friend-h">
+  <h2 id="friend-h">what the friend gets</h2>
+  <div class="two">
+    <div class="glass">
+      <h3>gets</h3>
+      <ul class="rules">
+        <li>one plain message on whatsapp after five quiet days. the one above, with your names in it.</li>
+        <li>at most two more, four days apart. then the banana stays gone and says nothing.</li>
+        <li>one line when you are back. <span class="speech">sam wrote. i am home. thank you.</span></li>
+        <li>a way out. they reply mute, it stops. you remove them, it stops. you pause the circle, it waits a month.</li>
+      </ul>
+    </div>
+    <div class="glass not">
+      <h3>does not get</h3>
+      <ul class="rules">
+        <li>a word of what you wrote. the banana only knows dates.</li>
+        <li>a mood, a rating, a title, a photo.</li>
+        <li>the app. friends never need it.</li>
+        <li>anything at all before they said yes on a page that shows the exact words, and keeps them.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="desk" aria-labelledby="desk-h">
   <div>
-    <h2>a banana for your desk</h2>
-    <p class="lead" style="margin-top:14px">a small one, in the corner of your screen. it does nothing most of the day. once or twice, if you have not written, it slides in with one line. click it to write. <a href="mac/">mac</a> first, <a href="windows/">windows</a> after. in both plans.</p>
+    <h2 id="desk-h">a banana for your desk</h2>
+    <p class="lead">a small one, in the corner of your screen. it does nothing most of the day. once or twice, if you have not written, it slides in with one line. click it and the phone opens to a blank page.</p>
+    <p class="fine"><a href="mac/">mac</a> first, <a href="windows/">windows</a> after. in both plans.</p>
   </div>
-  <div class="deskart" aria-hidden="true">
-    <div class="win"><i></i><span style="top:34px;width:60%"></span><span style="top:52px;width:80%"></span><span style="top:70px;width:45%"></span><span style="top:88px;width:70%"></span></div>
-    <img class="buddy" src="assets/coat.png" alt="" />
-  </div>
-</section>
-
-<section class="center">
-  <h2>two weeks free.</h2>
-  <p class="lead" style="margin:14px auto 22px">no card until you pick a plan. your journal exports in one tap, plan or no plan.</p>
-  <div class="badges" style="justify-content:center">
-    <a class="badge" href="download/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg> app store</a>
-    <a class="badge" href="download/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg> google play</a>
-  </div>
-</section>
-
-<footer class="bottom">
-  <nav>
-    <a href="privacy/">privacy</a>
-    <a href="terms/">terms</a>
-    <a href="support/">support</a>
-    <a href="download/">download</a>
-    <a href="mailto:info@skriblio.com">info@skriblio.com</a>
-  </nav>
-  <div>skriblio is made by steady labs (pty) ltd, south africa. for adults, 18 and over.</div>
-</footer>
+  
+<div class="deskart" role="img" aria-label="a drawing of a computer screen with a small pixel banana in the bottom corner and a one line note next to it">
+  <div class="win"><i></i><span style="top:34px;width:60%"></span><span style="top:52px;width:80%"></span><span style="top:70px;width:45%"></span><span style="top:88px;width:70%"></span></div>
+  <div class="panel"><span>two days. i noticed.</span><b>write</b></div>
+  <img class="buddy" src="assets/coat.png" alt="" width="128" height="128" />
 </div>
+</section>
+
+<section class="yours" aria-labelledby="yours-h">
+  <h2 id="yours-h">yours</h2>
+  <ul class="facts">
+    <li><b>face id lock</b>one switch, in you.</li>
+    <li><b>ios data protection</b>on the phone, and private storage on the server.</li>
+    <li><b>export any time</b>text, a pdf, or a zip with every photo as you took it.</li>
+    <li><b>delete any time</b>two taps. photos first, then every row that was yours.</li>
+    <li><b>friends get a plain line</b>never the words.</li>
+  </ul>
+</section>
+
+<section class="price" aria-labelledby="price-h">
+  <h2 id="price-h">two weeks free.</h2>
+  <p class="lead">no card until you pick a plan. then $49.99 a year or $9.99 a month, one price everywhere. your journal exports in one tap, plan or no plan.</p>
+  <div class="badges"><span class="badge soon" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg><span>app store</span><small>soon</small></span><span class="badge soon" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg><span>google play</span><small>soon</small></span></div>
+</section>
+
+<section class="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">questions</h2>
+  <details><summary>how do i cancel</summary><p>apple or google handle the subscription, not us. iphone: settings, your name, subscriptions, skriblio. android: play store, your profile, payments and subscriptions. you keep access until the period ends.</p></details>
+  <details><summary>can i get my journal out</summary><p>yes. you, then export my data. one text file, a pdf laid out to print, or a zip with your photos as originals and the care log. with a plan or without one, always.</p></details>
+  <details><summary>what happens when i delete</summary><p>you, then delete my account, then confirm. it is immediate. photos first, then every row that was yours. friends stop being messaged at once. no waiting period, no email to write.</p></details>
+  <details><summary>what do my friends see</summary><p>that you have not written for a few days, and later that you have. never a word of what you wrote, never a mood or a rating. the exact messages are on this page.</p></details>
+  <details><summary>what if i stop</summary><p>the banana leaves on day five and a friend hears once, if you set that up. two more messages at most, four days apart, then quiet. your journal waits. write once and the banana walks back in.</p></details>
+  <details><summary>is it a habit app</summary><p>no. no streaks, no badges, no red dots, no confetti. one banana, one count, one friend who might ask how you are. that is the whole trick, and it is opt in twice.</p></details>
+  <details><summary>do my friends need the app</summary><p>no. they get a plain message on whatsapp and can reply mute. they say yes first on a page that shows the exact words.</p></details>
+  <details><summary>what does it cost</summary><p>two weeks free from your first entry. then $49.99 a year or $9.99 a month, one usd price in every country. the mac and windows banana are in both plans.</p></details>
+</section>
+
+</main>
+<footer class="bottom">
+  <div class="wrap">
+    <nav aria-label="footer">
+      <a href="privacy/">privacy</a>
+      <a href="terms/">terms</a>
+      <a href="support/">support</a>
+      <a href="download/">download</a>
+      <a href="mac/">mac</a>
+      <a href="windows/">windows</a>
+      <a href="mailto:info@skriblio.com">info@skriblio.com</a>
+    </nav>
+    <p>skriblio is made by steady labs (pty) ltd, south africa. for adults, 18 and over.</p>
+    <p>journal, or the banana tells.</p>
+  </div>
+</footer>
+<script>
+(function(){var b=document.querySelector(".menu"),n=document.getElementById("nav");if(!b||!n)return;
+document.documentElement.classList.add("js");
+b.addEventListener("click",function(){var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));n.classList.toggle("open",!o);b.textContent=o?"menu":"close";});
+n.addEventListener("click",function(e){if(e.target.tagName==="A"){b.setAttribute("aria-expanded","false");n.classList.remove("open");b.textContent="menu";}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&n.classList.contains("open")){b.click();b.focus();}});})();
+</script>
 </body>
 </html>

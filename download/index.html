@@ -4,74 +4,110 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>get skriblio</title>
-<meta name="description" content="iphone and android. two weeks free." />
-
+<meta name="description" content="iphone and android. two weeks free, then one price everywhere." />
 <link rel="canonical" href="https://skriblio.com/download/" />
 <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="../assets/icon-180.png" />
-<meta property="og:title" content="get skriblio" />
-<meta property="og:description" content="iphone and android. two weeks free." />
-<meta property="og:image" content="https://skriblio.com/assets/og.png" />
-<meta property="og:url" content="https://skriblio.com/download/" />
+<meta property="og:site_name" content="skriblio" />
+<meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
+<meta property="og:title" content="get skriblio" />
+<meta property="og:description" content="iphone and android. two weeks free, then one price everywhere." />
+<meta property="og:url" content="https://skriblio.com/download/" />
+<meta property="og:image" content="https://skriblio.com/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="get skriblio" />
+<meta name="twitter:description" content="iphone and android. two weeks free, then one price everywhere." />
+<meta name="twitter:image" content="https://skriblio.com/assets/og.png" />
+<meta name="twitter:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="theme-color" content="#F6EBD2" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+<link rel="preload" href="../assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
 <link rel="stylesheet" href="../site.css" />
 </head>
 <body>
-<div class="wrap">
+<a class="skip" href="#main">skip to content</a>
 <header class="top">
-  <a class="wordmark" href="../"><img src="../assets/ned.png" alt="" width="28" height="28" />skriblio</a>
-  <nav class="main"><a href="../mac/">mac</a><a href="../windows/">windows</a><a href="../support/">support</a></nav>
-</header>
-
-<section class="hero" style="padding-top:20px">
-  <div class="copy">
-    <h1>get skriblio.</h1>
-    <p class="lead" id="line">looking at your device.</p>
-    <div class="badges" id="badges">
-      <a class="badge" id="ios" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg> app store</a>
-      <a class="badge" id="android" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg> google play</a>
-    </div>
-    <div class="fine" id="fine">two weeks free. iphone and android. mac and windows companions after.</div>
+  <div class="in">
+    <a class="wordmark" href="../"><img src="../assets/ned.png" alt="" width="28" height="28" />skriblio</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+    <nav class="main" id="nav" aria-label="site">
+      <a href="../mac/">mac</a>
+      <a href="../windows/">windows</a>
+      <a href="../support/">support</a>
+      <a href="../download/" aria-current="page">download</a>
+    </nav>
   </div>
-  <div class="art"><img src="../assets/kit.png" alt="kit, a small loud pixel banana" width="320" height="320" /></div>
+</header>
+<main class="wrap" id="main">
+
+<section class="hero tight" aria-labelledby="h">
+  <div class="copy">
+    <h1 id="h">get skriblio.</h1>
+    <p class="lead" id="line">not in the stores yet. the banana is being reviewed.</p>
+    <div class="badges" id="badges">
+      <span class="badge soon" id="ios" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg><span>app store</span><small>soon</small></span>
+      <span class="badge soon" id="android" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg><span>google play</span><small>soon</small></span>
+    </div>
+    <p class="fine" id="fine">when it is live this page sends your phone to the right store. mail info@skriblio.com if you want to know the day.</p>
+    
+  </div>
+  <div class="art"><img src="../assets/kit.png" alt="kit, a pixel banana lying down on purpose" width="256" height="256" fetchpriority="high" /></div>
+</section>
+
+<section class="two" aria-labelledby="desk-h">
+  <div class="glass">
+    <h3 id="desk-h">for the desk</h3>
+    <p>a small banana for the corner of your screen. same count, one line. <a href="../mac/">mac</a> and <a href="../windows/">windows</a>, in both plans.</p>
+  </div>
+  <div class="glass">
+    <h3>already have it</h3>
+    <p>sign in with your email on the new phone. a six digit code, no password. everything is where you left it.</p>
+  </div>
 </section>
 <script>
 (function () {
   var ios = "", play = "";
+  if (!ios && !play) return;
   var ua = navigator.userAgent || "";
   var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   var isAndroid = /Android/.test(ua);
-  var line = document.getElementById("line"), fine = document.getElementById("fine");
+  var line = document.getElementById("line"), fine = document.getElementById("fine"), qrs = document.getElementById("qrs");
   var a = document.getElementById("ios"), g = document.getElementById("android");
-  if (!ios && !play) {
-    line.textContent = "not in the stores yet. the banana is being reviewed.";
-    fine.textContent = "when it is live this page sends your phone to the right store. mail info@skriblio.com if you want to know the day.";
-    a.classList.add("ghost"); g.classList.add("ghost");
-    a.removeAttribute("href"); g.removeAttribute("href");
-    return;
-  }
-  if (isIOS && ios) { line.textContent = "iphone. one tap."; g.style.display = "none"; location.replace(ios); return; }
-  if (isAndroid && play) { line.textContent = "android. one tap."; a.style.display = "none"; location.replace(play); return; }
-  line.textContent = "open this page on your phone, or pick a store.";
-  if (!ios) a.style.display = "none";
-  if (!play) g.style.display = "none";
+  if (isIOS && ios) { line.textContent = "iphone. one tap."; g.hidden = true; if (qrs) qrs.hidden = true; location.replace(ios); return; }
+  if (isAndroid && play) { line.textContent = "android. one tap."; a.hidden = true; if (qrs) qrs.hidden = true; location.replace(play); return; }
+  line.textContent = "point your phone at the code, or pick a store.";
+  fine.textContent = "two weeks free. iphone and android.";
 })();
 </script>
 
+</main>
 <footer class="bottom">
-  <nav>
-    <a href="../privacy/">privacy</a>
-    <a href="../terms/">terms</a>
-    <a href="../support/">support</a>
-    <a href="../download/">download</a>
-    <a href="mailto:info@skriblio.com">info@skriblio.com</a>
-  </nav>
-  <div>skriblio is made by steady labs (pty) ltd, south africa. for adults, 18 and over.</div>
+  <div class="wrap">
+    <nav aria-label="footer">
+      <a href="../privacy/">privacy</a>
+      <a href="../terms/">terms</a>
+      <a href="../support/">support</a>
+      <a href="../download/">download</a>
+      <a href="../mac/">mac</a>
+      <a href="../windows/">windows</a>
+      <a href="mailto:info@skriblio.com">info@skriblio.com</a>
+    </nav>
+    <p>skriblio is made by steady labs (pty) ltd, south africa. for adults, 18 and over.</p>
+    <p>journal, or the banana tells.</p>
+  </div>
 </footer>
-</div>
+<script>
+(function(){var b=document.querySelector(".menu"),n=document.getElementById("nav");if(!b||!n)return;
+document.documentElement.classList.add("js");
+b.addEventListener("click",function(){var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));n.classList.toggle("open",!o);b.textContent=o?"menu":"close";});
+n.addEventListener("click",function(e){if(e.target.tagName==="A"){b.setAttribute("aria-expanded","false");n.classList.remove("open");b.textContent="menu";}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&n.classList.contains("open")){b.click();b.focus();}});})();
+</script>
 </body>
 </html>
