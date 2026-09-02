@@ -3,24 +3,26 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>skriblio, journal or the banana tells</title>
-<meta name="description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose. two weeks free." />
+<script>(function(){try{if(sessionStorage.getItem("skriblio.in")==="1")return;}catch(e){}document.documentElement.classList.add("shut");})();</script>
+<title>skriblio</title>
+<meta name="description" content="skriblio." />
+<meta name="robots" content="noindex" />
 <link rel="canonical" href="https://skriblio.com/" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/icon-180.png" />
 <meta property="og:site_name" content="skriblio" />
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="skriblio, journal or the banana tells" />
-<meta property="og:description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose. two weeks free." />
+<meta property="og:title" content="skriblio" />
+<meta property="og:description" content="skriblio." />
 <meta property="og:url" content="https://skriblio.com/" />
 <meta property="og:image" content="https://skriblio.com/assets/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="skriblio, journal or the banana tells" />
-<meta name="twitter:description" content="a paid journal with a pixel banana. write or photograph the page. stop for five days and the banana tells a friend you chose. two weeks free." />
+<meta name="twitter:title" content="skriblio" />
+<meta name="twitter:description" content="skriblio." />
 <meta name="twitter:image" content="https://skriblio.com/assets/og.png" />
 <meta name="twitter:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="theme-color" content="#F6EBD2" />
@@ -31,6 +33,40 @@
 <link rel="stylesheet" href="site.css" />
 </head>
 <body class="home">
+<div id="gate">
+  <img class="px" src="img/faces/post-board.png" alt="" width="256" height="256" />
+  <form id="gate-form" action="#" method="get">
+    <label for="gate-in">password</label>
+    <input id="gate-in" type="password" name="p" autocomplete="off" spellcheck="false" />
+    <p id="gate-no" hidden>no.</p>
+  </form>
+</div>
+<script>
+(function(){
+  var html=document.documentElement;
+  if(!html.classList.contains("shut")) return;
+  var form=document.getElementById("gate-form");
+  var inn=document.getElementById("gate-in");
+  var no=document.getElementById("gate-no");
+  function go(){
+    try{sessionStorage.setItem("skriblio.in","1");}catch(e){}
+    html.classList.remove("shut");
+    var g=document.getElementById("gate");
+    if(g) g.remove();
+  }
+  function ok(){
+    var v=(inn.value||"").replace(/\s/g,"").toLowerCase();
+    if(v==="openskriblioplease"){go();return true;}
+    return false;
+  }
+  inn.addEventListener("input",function(){if(ok())return;no.hidden=true;});
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(!ok()){no.hidden=false;inn.value="";inn.focus();}
+  });
+  inn.focus();
+})();
+</script>
 <a class="skip" href="#main">skip to content</a>
 <header class="top">
   <div class="in">
@@ -98,7 +134,7 @@
     <li><img class="px" src="img/faces/husk-board.png" alt="husk, a pixel banana" width="128" height="128" loading="lazy" /><b>husk</b><span>half out already</span></li>
     <li><img class="px" src="img/faces/brick-board.png" alt="brick, a pixel banana" width="128" height="128" loading="lazy" /><b>brick</b><span>a plantain. not cute</span></li>
     <li><img class="px" src="img/faces/post-board.png" alt="post, a pixel banana" width="128" height="128" loading="lazy" /><b>post</b><span>carries the mail bag</span></li>
-    <li><img class="px" src="img/faces/moe-board.png" alt="moe, a pixel banana" width="128" height="128" loading="lazy" /><b>moe</b><span>the monk</span></li>
+    <li><img class="px grow" src="img/faces/moe-board.png" alt="moe, a pixel banana" width="128" height="128" style="--grow:1.42" loading="lazy" /><b>moe</b><span>the monk</span></li>
     <li><img class="px" src="img/faces/ned-board.png" alt="ned, a pixel banana" width="128" height="128" loading="lazy" /><b>ned</b><span>round. has had enough</span></li>
     <li><img class="px" src="img/faces/shush-board.png" alt="shush, a pixel banana" width="128" height="128" loading="lazy" /><b>shush</b><span>the librarian</span></li>
     <li><img class="px" src="img/faces/kit-board.png" alt="kit, a pixel banana" width="128" height="128" loading="lazy" /><b>kit</b><span>lying down. on purpose</span></li>
