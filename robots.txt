@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /accept/
+Sitemap: https://skriblio.com/sitemap.xml
