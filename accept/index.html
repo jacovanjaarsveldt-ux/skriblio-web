@@ -53,6 +53,7 @@
   <section id="done" hidden>
     <h1 id="done-title"></h1>
     <p id="done-body"></p>
+    <p class="soft" id="done-code" hidden></p>
     <p class="soft">you can close this.</p>
   </section>
 </main>
@@ -69,7 +70,7 @@
     const r = await fetch(`${FN}?token=${encodeURIComponent(token)}`, { headers: { accept: "application/json" } }).catch(() => null);
     if (!r || !r.ok) return show("invalid");
     const v = await r.json();
-    if (v.status === "accepted") return finished(v.friendName, v.banana);
+    if (v.status === "accepted") return finished(v.friendName, v.banana, v.code);
     $("hello").textContent = `hi ${v.friendName}. i am ${v.banana}.`;
     $("intro").textContent = `i am a banana. i keep a journal with ${v.inviter}.`;
     $("wording").textContent = v.wording;
@@ -79,9 +80,14 @@
     show("ask");
   }
 
-  function finished(friend, banana) {
+  function finished(friend, banana, code) {
     $("done-title").textContent = `noted, ${friend}.`;
     $("done-body").textContent = `${banana} will only write if your friend goes quiet for five days. after that at most once a week, never more than three times in one quiet spell, and only to say whether they wrote. reply mute to any message to stop.`;
+    // After consent only, and in the small print: a code, not a pitch. docs/features/referral.md
+    if (code) {
+      $("done-code").textContent = `if you ever keep a journal with a banana of your own, the code ${code} in the app adds a week to your trial and your friend's.`;
+      $("done-code").hidden = false;
+    }
     show("done");
   }
 
@@ -94,7 +100,7 @@
       headers: { "content-type": "application/json", accept: "application/json" },
       body: JSON.stringify({ token, phone: $("phone").value, wording: f.dataset.wording }),
     }).catch(() => null);
-    if (r && r.ok) return finished(f.dataset.friend, f.dataset.banana);
+    if (r && r.ok) return finished(f.dataset.friend, f.dataset.banana, (await r.json().catch(() => ({}))).code);
     err.textContent = r && r.status === 400 ? "that number does not look right. include the country code." : "something went wrong. try again.";
     err.hidden = false; go.disabled = false;
   });
