@@ -6,6 +6,8 @@
 <title>skriblio</title>
 <meta name="robots" content="noindex" />
 <link rel="icon" href="../favicon.png?v=ned" type="image/png" sizes="32x32" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6EQ5FSL2TK"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
 <style>
@@ -83,7 +85,7 @@
 
   function finished(friend, banana, code) {
     $("done-title").textContent = `noted, ${friend}.`;
-    $("done-body").textContent = `${banana} will only write if your friend goes quiet for five days. after that at most once a week, never more than three times in one quiet spell, and only to say whether they wrote. reply mute to any message to stop.`;
+    $("done-body").textContent = `${banana} may write if your friend goes quiet. first message after five quiet days, then every four days, at most three per silence, stops the moment they write. never what they wrote. reply mute to any message to stop.`;
     // After consent only, and in the small print: a code, not a pitch. docs/features/referral.md
     if (code) {
       $("done-code").textContent = `if you ever keep a journal with a banana of your own, the code ${code} in the app adds a week to your trial and your friend's.`;
