@@ -3,24 +3,26 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>get skriblio</title>
-<meta name="description" content="iphone and android. two weeks free, then a year or a month." />
-<link rel="canonical" href="https://skriblio.com/download/" />
+<script>(function(){try{if(sessionStorage.getItem("skriblio.in")==="1")return;}catch(e){}document.documentElement.classList.add("shut");})();</script>
+<title>skriblio, rogue</title>
+<meta name="description" content="write, or a friend hears. a private journal with a banana that can tell someone you picked." />
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://skriblio.com/rogue/" />
 <link rel="icon" href="../favicon.png?v=ned" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="../assets/icon-180.png" />
 <meta property="og:site_name" content="skriblio" />
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="get skriblio" />
-<meta property="og:description" content="iphone and android. two weeks free, then a year or a month." />
-<meta property="og:url" content="https://skriblio.com/download/" />
+<meta property="og:title" content="skriblio, rogue" />
+<meta property="og:description" content="write, or a friend hears. a private journal with a banana that can tell someone you picked." />
+<meta property="og:url" content="https://skriblio.com/rogue/" />
 <meta property="og:image" content="https://skriblio.com/assets/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="get skriblio" />
-<meta name="twitter:description" content="iphone and android. two weeks free, then a year or a month." />
+<meta name="twitter:title" content="skriblio, rogue" />
+<meta name="twitter:description" content="write, or a friend hears. a private journal with a banana that can tell someone you picked." />
 <meta name="twitter:image" content="https://skriblio.com/assets/og.png" />
 <meta name="twitter:image:alt" content="journal, or the banana tells. ned, a round pixel banana, on cream." />
 <meta name="theme-color" content="#F6EBD2" />
@@ -33,6 +35,40 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 </head>
 <body>
+<div id="gate">
+  <img class="px" src="../img/faces/post-board.png" alt="" width="256" height="256" />
+  <form id="gate-form" action="#" method="get">
+    <label for="gate-in">password</label>
+    <input id="gate-in" type="password" name="p" autocomplete="off" spellcheck="false" />
+    <p id="gate-no" hidden>no.</p>
+  </form>
+</div>
+<script>
+(function(){
+  var html=document.documentElement;
+  if(!html.classList.contains("shut")) return;
+  var form=document.getElementById("gate-form");
+  var inn=document.getElementById("gate-in");
+  var no=document.getElementById("gate-no");
+  function go(){
+    try{sessionStorage.setItem("skriblio.in","1");}catch(e){}
+    html.classList.remove("shut");
+    var g=document.getElementById("gate");
+    if(g) g.remove();
+  }
+  function ok(){
+    var v=(inn.value||"").replace(/\s/g,"").toLowerCase();
+    if(v==="openskriblioplease"){go();return true;}
+    return false;
+  }
+  inn.addEventListener("input",function(){if(ok())return;no.hidden=true;});
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(!ok()){no.hidden=false;inn.value="";inn.focus();}
+  });
+  inn.focus();
+})();
+</script>
 <a class="skip" href="#main">skip to content</a>
 <header class="top">
   <div class="in">
@@ -43,7 +79,7 @@
       <a href="../#school">journal school</a>
       <a href="../privacy/">privacy</a>
       <a href="../support/">support</a>
-      <a href="../download/" aria-current="page">download</a>
+      <a href="../download/">download</a>
     </nav>
   </div>
 </header>
@@ -51,43 +87,24 @@
 
 <section class="hero tight" aria-labelledby="h">
   <div class="copy">
-    <h1 id="h">get skriblio.</h1>
-    <p class="lead" id="line">not in the stores yet. the banana is being reviewed.</p>
-    <div class="badges" id="badges">
-      <span class="badge soon" id="ios" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg><span>app store</span><small>soon</small></span>
-      <span class="badge soon" id="android" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg><span>google play</span><small>soon</small></span>
-    </div>
-    <p class="fine" id="fine">when it is live this page sends your phone to the right store. mail info@skriblio.com if you want to know the day.</p>
-    
+    <p class="kicker">rogue</p>
+    <h1 id="h">write, or a friend hears.</h1>
+    <p class="lead">a private journal. a banana that keeps count. if you stop, someone you picked can ask how you are.</p>
+    <div class="badges"><a class="badge" href="../download/">download</a></div>
+    <p class="fine">two weeks free. then $49.99 a year or $9.99 a month. apple and google show the price in your currency. mac and windows included.</p>
   </div>
-  <div class="art"><img class="px" src="../img/faces/kit-board.png" alt="kit, a pixel banana lying down on purpose" width="256" height="256" fetchpriority="high" /></div>
+  <figure class="phone-shot"><img src="../img/product/circle.jpg" alt="the circle screen, where friends say yes first" width="330" height="717" fetchpriority="high" /></figure>
 </section>
-
-<section class="two" aria-labelledby="desk-h">
-  <div class="glass">
-    <h2 id="desk-h">for the desk</h2>
-    <p>a small banana for the corner of your screen. same count, one line. <a href="../mac/">mac</a> and <a href="../windows/">windows</a>, in both plans.</p>
-  </div>
-  <div class="glass">
-    <h2>already have it</h2>
-    <p>sign in with your email on the new phone. a six digit code, no password. everything is where you left it.</p>
-  </div>
+<section aria-labelledby="facts-h">
+  <h2 id="facts-h">what you get</h2>
+  <ul class="rules">
+    <li>the banana leaves on day five. first message after five quiet days, then every four days, at most three per silence, stops the moment they write.</li>
+    <li>the friend sees only that you have not written. never a word of the page.</li>
+    <li>they say yes first, on a page that shows the exact words. they can reply mute.</li>
+  </ul>
+  <p class="notice">the friend message is not live. the wording and the yes page are ready. until the number is, nothing goes out on its own.</p>
+  <p class="fine">the rest of the product is on the <a href="../">home page</a>.</p>
 </section>
-<script>
-(function () {
-  var ios = "", play = "";
-  if (!ios && !play) return;
-  var ua = navigator.userAgent || "";
-  var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  var isAndroid = /Android/.test(ua);
-  var line = document.getElementById("line"), fine = document.getElementById("fine"), qrs = document.getElementById("qrs");
-  var a = document.getElementById("ios"), g = document.getElementById("android");
-  if (isIOS && ios) { line.textContent = "iphone. one tap."; g.hidden = true; if (qrs) qrs.hidden = true; location.replace(ios); return; }
-  if (isAndroid && play) { line.textContent = "android. one tap."; a.hidden = true; if (qrs) qrs.hidden = true; location.replace(play); return; }
-  line.textContent = "point your phone at the code, or pick a store.";
-  fine.textContent = "two weeks free. iphone and android.";
-})();
-</script>
 
 </main>
 <footer class="bottom">

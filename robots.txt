@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /accept/
+Disallow: /rogue/
+Disallow: /clarity/
+Disallow: /paper/
 Sitemap: https://skriblio.com/sitemap.xml
