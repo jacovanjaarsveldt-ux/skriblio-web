@@ -3,10 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script>(function(){try{if(sessionStorage.getItem("skriblio.in")==="1")return;}catch(e){}document.documentElement.classList.add("shut");})();</script>
 <title>skriblio, rogue</title>
 <meta name="description" content="write, or a friend hears. a private journal with a banana that can tell someone you picked." />
-<meta name="robots" content="noindex" />
 <link rel="canonical" href="https://skriblio.com/rogue/" />
 <link rel="icon" href="../favicon.png?v=ned" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="../assets/icon-180.png" />
@@ -30,45 +28,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
 <link rel="preload" href="../assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
-<link rel="stylesheet" href="../site.css?v=pos" />
+<link rel="stylesheet" href="../site.css?v=co" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EQ5FSL2TK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 </head>
 <body>
-<div id="gate">
-  <img class="px" src="../img/faces/post-board.png" alt="" width="256" height="256" />
-  <form id="gate-form" action="#" method="get">
-    <label for="gate-in">password</label>
-    <input id="gate-in" type="password" name="p" autocomplete="off" spellcheck="false" />
-    <p id="gate-no" hidden>no.</p>
-  </form>
-</div>
-<script>
-(function(){
-  var html=document.documentElement;
-  if(!html.classList.contains("shut")) return;
-  var form=document.getElementById("gate-form");
-  var inn=document.getElementById("gate-in");
-  var no=document.getElementById("gate-no");
-  function go(){
-    try{sessionStorage.setItem("skriblio.in","1");}catch(e){}
-    html.classList.remove("shut");
-    var g=document.getElementById("gate");
-    if(g) g.remove();
-  }
-  function ok(){
-    var v=(inn.value||"").replace(/\s/g,"").toLowerCase();
-    if(v==="openskriblioplease"){go();return true;}
-    return false;
-  }
-  inn.addEventListener("input",function(){if(ok())return;no.hidden=true;});
-  form.addEventListener("submit",function(e){
-    e.preventDefault();
-    if(!ok()){no.hidden=false;inn.value="";inn.focus();}
-  });
-  inn.focus();
-})();
-</script>
 <a class="skip" href="#main">skip to content</a>
 <header class="top">
   <div class="in">
@@ -118,7 +82,7 @@
       <a href="../windows/">windows</a>
       <a href="mailto:info@skriblio.com">info@skriblio.com</a>
     </nav>
-    <p>skriblio is made by steady labs (pty) ltd, south africa. for adults, 18 and over.</p>
+    <p>skriblio is made by steady labs (pty) ltd, south africa. 2026/086606/07. for adults, 18 and over.</p>
     <p>journal, or the banana tells.</p>
   </div>
 </footer>
