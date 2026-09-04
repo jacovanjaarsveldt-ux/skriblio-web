@@ -328,6 +328,8 @@ html.shut #gate {
   border: 1px solid var(--glass-border); border-radius: 14px; padding: 14px 16px;
 }
 #gate #gate-no { font-family: var(--mono); font-size: 13px; color: var(--soft); margin: 0; }
+#gate .who { font-family: var(--mono); font-size: 13px; color: var(--soft); margin: 16px 0 0; max-width: 22em; text-align: center; }
+#gate .who a { color: inherit; }
 
 /* footer */
 footer.bottom { padding: 48px 0 64px; border-top: 1px solid var(--glass-border); font-family: var(--mono); font-size: 12px; line-height: 1.7; color: var(--soft); }
