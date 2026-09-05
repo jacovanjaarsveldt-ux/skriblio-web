@@ -75,7 +75,7 @@
     const v = await r.json();
     if (v.status === "accepted") return finished(v.friendName, v.banana, v.code);
     $("hello").textContent = `hi ${v.friendName}. i am ${v.banana}.`;
-    $("intro").textContent = `i am a banana. ${v.inviter} keeps a journal with me, on skriblio. if they stay away too long, i tell you. that is the one thing i would ever send.`;
+    $("intro").textContent = `i am a banana. ${v.inviter} keeps a journal with me, on skriblio. if they stay away too long, i tell you that. only that. never a word of what they wrote.`;
     $("wording").textContent = v.wording;
     $("f").dataset.wording = v.wording;
     $("f").dataset.friend = v.friendName;
