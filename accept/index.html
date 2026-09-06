@@ -36,7 +36,7 @@
   <section id="loading"><p class="soft">one moment.</p></section>
 
   <section id="invalid" hidden>
-    <h1>that link is not one of mine.</h1>
+    <h1>that link isn't one of mine.</h1>
     <p class="soft">ask your friend to send it again from the app.</p>
   </section>
 
@@ -75,7 +75,7 @@
     const v = await r.json();
     if (v.status === "accepted") return finished(v.friendName, v.banana, v.code);
     $("hello").textContent = `hi ${v.friendName}. i am ${v.banana}.`;
-    $("intro").textContent = `i am a banana. ${v.inviter} keeps a journal with me, on skriblio. if they stay away too long, i tell you that. only that. never a word of what they wrote.`;
+    $("intro").textContent = `i'm a banana, and ${v.inviter} keeps a journal with me on skriblio. if they stay away too long, i tell you that and only that, and never a word of what they wrote.`;
     $("wording").textContent = v.wording;
     $("f").dataset.wording = v.wording;
     $("f").dataset.friend = v.friendName;
@@ -88,7 +88,7 @@
     $("done-body").textContent = `${banana} may write if your friend goes quiet. first message after five quiet days, then every four days, at most three per silence, stops the moment they write. never what they wrote. reply mute to any message to stop.`;
     // After consent only, and in the small print: a code, not a pitch. docs/features/referral.md
     if (code) {
-      $("done-code").textContent = `if you ever keep a journal with a banana of your own, the code ${code} in the app adds a week to your trial and your friend's.`;
+      $("done-code").textContent = `if you ever keep a journal with a banana of your own, type the code ${code} in the app. it adds a week to your free two weeks and to your friend's.`;
       $("done-code").hidden = false;
     }
     show("done");
@@ -104,7 +104,7 @@
       body: JSON.stringify({ token, phone: $("phone").value, wording: f.dataset.wording }),
     }).catch(() => null);
     if (r && r.ok) return finished(f.dataset.friend, f.dataset.banana, (await r.json().catch(() => ({}))).code);
-    err.textContent = r && r.status === 400 ? "that number does not look right. include the country code." : "something went wrong. try again.";
+    err.textContent = r && r.status === 400 ? "that number doesn't look right. include the country code." : "something went wrong, so try again.";
     err.hidden = false; go.disabled = false;
   });
 
