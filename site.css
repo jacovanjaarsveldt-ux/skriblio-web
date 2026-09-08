@@ -161,6 +161,10 @@ section > h2 + .lead.sub { margin-top: -10px; }
 
 /* the gone scene and the phone */
 .scene { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 16px; align-items: stretch; }
+/* the rogue section is one room, no phone beside it: the friend message lives on /rogue/ now. */
+.scene.solo { grid-template-columns: 1fr; }
+.scene.solo .room { padding: 72px 28px; }
+.scene.solo .room .speech { max-width: 52ch; }
 @media (max-width: 720px) { .scene { grid-template-columns: 1fr; } }
 .room {
   position: relative; border-radius: var(--radius); overflow: hidden; background: var(--ink2); color: var(--cream);
@@ -248,14 +252,24 @@ section > h2 + .lead.sub { margin-top: -10px; }
 .proof span { font-family: var(--mono); font-size: 12px; color: var(--soft); }
 .phone-shot { margin: 0; border-radius: 18px; overflow: hidden; background: var(--paper); border: 1px solid var(--glass-border); box-shadow: 0 16px 36px rgba(110, 74, 31, 0.12); }
 .phone-shot img { width: 100%; height: auto; display: block; }
+/* five product shots now stack down the home page. uncapped they run near 1000px each and every
+   section grows a hole beside its text, so cap the frame and crop from the bottom of the phone. */
+.paper-split .phone-shot { max-height: 560px; overflow: hidden; }
+.paper-split .phone-shot img { object-fit: cover; object-position: top; }
 .paper-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; }
+/* three splits stack on the home page, so the middle one mirrors and the page stops feeling like a column of cards. */
+.paper-split.flip { grid-template-columns: 0.9fr 1.1fr; }
+.paper-split.flip > div { order: 2; }
+.paper-split.flip > figure { order: 1; }
 .school-grid { grid-template-columns: repeat(3, 1fr); }
 .plans { display: grid; gap: 22px; }
 .plans ul { grid-template-columns: 1fr 1fr; max-width: 720px; }
 .plan-sum { font-family: var(--serif); font-size: 42px; line-height: 1; color: var(--ink); }
 @media (max-width: 960px) {
   .audiences ul, .proof ul, .school-grid { grid-template-columns: 1fr 1fr; }
-  .paper-split { grid-template-columns: 1fr; }
+  .paper-split, .paper-split.flip { grid-template-columns: 1fr; }
+  /* stacked, the words come first in every section, flipped or not. */
+  .paper-split.flip > div, .paper-split.flip > figure { order: 0; }
 }
 @media (max-width: 720px) {
   .audiences ul, .proof ul, .school-grid, .plans ul { grid-template-columns: 1fr; }
