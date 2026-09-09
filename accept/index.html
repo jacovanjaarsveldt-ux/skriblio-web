@@ -85,7 +85,7 @@
 
   function finished(friend, banana, code) {
     $("done-title").textContent = `noted, ${friend}.`;
-    $("done-body").textContent = `${banana} may write if your friend goes quiet. first message after five quiet days, then every four days, at most three per silence, stops the moment they write. never what they wrote. reply mute to any message to stop.`;
+    $("done-body").textContent = `${banana} may write if your friend goes quiet. one friend hears after five quiet days, then another every four days, each once, later if alone, and it stops when they write. never what they wrote. reply mute to any message to stop.`;
     // After consent only, and in the small print: a code, not a pitch. docs/features/referral.md
     if (code) {
       $("done-code").textContent = `if you ever keep a journal with a banana of your own, type the code ${code} in the app. it adds a week to your free two weeks and to your friend's.`;
