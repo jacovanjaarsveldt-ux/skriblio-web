@@ -55,7 +55,7 @@
 <p>POPIA section 21 (operators) and GDPR article 28 and 30 both want this table. Kept current by whoever adds a service. Published in short form at <a href="https://skriblio.com/privacy/processors">skriblio.com/privacy/processors</a>.</p>
 <h2>Processors (operators)</h2>
 <table><thead><tr><th>processor</th><th>what they receive</th><th>why</th><th>where</th><th>agreement</th></tr></thead><tbody>
-<tr><td>Supabase Inc</td><td>all account, journal, circle and consent data; photographs in the <code>vault</code> bucket</td><td>database, auth, storage, edge functions, cron</td><td>Frankfurt, Germany (one project, ref <code>qrpoauexqrfcgiyimyxd</code>)</td><td>Supabase DPA, accepted in the dashboard</td></tr>
+<tr><td>Supabase Inc</td><td>all account, journal, circle and consent data; photographs, voice notes and drawings in the <code>vault</code> bucket</td><td>database, auth, storage, edge functions, cron</td><td>Frankfurt, Germany (one project, ref <code>qrpoauexqrfcgiyimyxd</code>)</td><td>Supabase DPA, accepted in the dashboard</td></tr>
 <tr><td>Anthropic PBC</td><td>photographs of journal pages, per request</td><td>handwriting transcription</td><td>United States</td><td>Anthropic commercial terms and DPA; no training on API inputs</td></tr>
 <tr><td>RevenueCat Inc</td><td>app user id, purchase receipts from Apple and Google</td><td>subscription status</td><td>United States</td><td>RevenueCat DPA</td></tr>
 <tr><td>Expo (650 Industries)</td><td>push token, notification payload (banana line only, never journal text)</td><td>push delivery to APNs and FCM</td><td>United States</td><td>Expo terms and DPA</td></tr>
@@ -76,6 +76,7 @@
 <tr><td>journal entries, titles, ratings</td><td>life of the account</td><td>soft deleted entries purged after 30 days; all purged on account deletion</td></tr>
 <tr><td>photographs (originals and derived)</td><td>life of the entry</td><td>removed from storage on entry purge or account deletion (storage first, then rows)</td></tr>
 <tr><td>transcripts</td><td>life of the photograph</td><td>deleted with the photograph, or alone on request</td></tr>
+<tr><td>voice notes and their typed words</td><td>life of the entry</td><td>removed from storage on entry purge or account deletion; typing up happens on the phone, no processor</td></tr>
 <tr><td>banana state, care log</td><td>life of the account</td><td>deleted on account deletion</td></tr>
 <tr><td>circle friend name and number</td><td>until removed or muted</td><td>purged 30 days after removal or mute</td></tr>
 <tr><td>consent record (number, time, wording, IP hash)</td><td>while in circle</td><td>purged 30 days after removal or mute</td></tr>
