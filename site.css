@@ -273,11 +273,16 @@ section > h2 + .lead.sub { margin-top: -10px; }
 .proof span { font-family: var(--mono); font-size: 12px; color: var(--soft); }
 .phone-shot { margin: 0; border-radius: 18px; overflow: hidden; background: var(--paper); border: 1px solid var(--glass-border); box-shadow: 0 16px 36px rgba(110, 74, 31, 0.12); }
 .phone-shot img { width: 100%; height: auto; display: block; }
-/* five product shots now stack down the home page. uncapped they run near 1000px each and every
-   section grows a hole beside its text, so cap the frame and crop from the bottom of the phone. */
-.paper-split .phone-shot { max-height: 560px; overflow: hidden; }
-.paper-split .phone-shot img { object-fit: cover; object-position: top; }
+/* the product shots (the life journal pass, 2026-09-26): whole phone screens at phone size, never cropped, because the
+   alt text names buttons at the bottom of a screen. Capped by width instead, so a shot runs about 650 px tall. */
+.paper-split .phone-shot, .hero > .phone-shot { justify-self: center; width: 100%; max-width: 300px; }
 .paper-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; }
+.paper-split h2 + .lead, .paper-split h3 + .lead { margin-top: 16px; }
+.paper-split .facts { margin-top: 18px; }
+.paper-split .fine { margin-top: 16px; }
+.paper-split + .school-grid { margin-top: 36px; }
+.school-grid + .fine { margin-top: 20px; }
+.sub-h { font-size: clamp(28px, 3.6vw, 36px); }
 /* three splits stack on the home page, so the middle one mirrors and the page stops feeling like a column of cards. */
 .paper-split.flip { grid-template-columns: 0.9fr 1.1fr; }
 .paper-split.flip > div { order: 2; }
@@ -295,6 +300,39 @@ section > h2 + .lead.sub { margin-top: -10px; }
 @media (max-width: 720px) {
   .audiences ul, .proof ul, .school-grid, .plans ul { grid-template-columns: 1fr; }
 }
+
+/* a shot with a line under it: the two trees, and home while the banana is away */
+.shot-cap { margin: 0; display: grid; gap: 12px; align-content: start; justify-items: center; }
+.shot-cap .phone-shot { width: 100%; }
+.shot-cap figcaption { font-family: var(--mono); font-size: 12px; line-height: 1.6; color: var(--soft); text-align: center; max-width: 34ch; text-wrap: balance; }
+.shot-cap figcaption b { display: block; font-weight: 400; font-size: 13px; color: var(--ink); margin-bottom: 2px; }
+.scene .shot-cap { justify-self: center; align-self: center; width: 100%; max-width: 300px; }
+
+/* the memory tree: its own glass panel, the words beside the young tree and the grown one (tree-young, tree-full) */
+.tree {
+  display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 44px; align-items: center; margin: 32px 0; padding: 44px 36px;
+  border-radius: 28px; background: var(--glass); border: 1px solid var(--glass-border);
+  backdrop-filter: blur(24px) saturate(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 18px 40px rgba(110, 74, 31, 0.10);
+}
+.tree .lead { margin-top: 16px; }
+.tree-copy > p:not([class]) { margin: 14px 0 0; color: var(--ink2); }
+.tree .rules { margin-top: 22px; }
+.growth { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 960px) {
+  .tree { grid-template-columns: 1fr; padding: 36px 24px; }
+  .growth { width: 100%; max-width: 600px; margin: 0 auto; }
+}
+@media (max-width: 720px) { .tree { padding: 28px 16px; margin: 16px 0; } .growth { gap: 12px; } }
+
+/* four of the app's own prompts as cards, in the serif the headings use */
+.asks { list-style: none; margin: 0 0 48px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.asks li {
+  padding: 22px 20px; border-radius: 18px; background: var(--cream2); border: 1px solid var(--glass-border);
+  font-family: var(--serif); font-size: 22px; line-height: 1.2; color: var(--ink); box-shadow: 0 8px 20px rgba(110, 74, 31, 0.06);
+}
+@media (max-width: 960px) { .asks { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .asks { grid-template-columns: 1fr; } }
 
 /* price */
 .price { text-align: center; display: grid; gap: 18px; justify-items: center; }
