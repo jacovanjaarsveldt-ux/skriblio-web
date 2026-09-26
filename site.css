@@ -25,7 +25,7 @@ body {
 }
 @media (prefers-reduced-motion: reduce) { body { background-attachment: scroll; } }
 img { display: block; max-width: 100%; }
-.px, .wordmark img, .hero .art img, .cast img, .deskart .buddy { image-rendering: pixelated; image-rendering: crisp-edges; }
+.px, .wordmark img, .hero .art img, .cast img { image-rendering: pixelated; image-rendering: crisp-edges; }
 .px.grow { transform: scale(var(--grow, 1)); transform-origin: 50% 92%; }
 a { color: inherit; text-decoration: none; }
 p a, li a, .fine a, figcaption a { text-decoration: underline; text-decoration-color: var(--banana); text-decoration-thickness: 2px; text-underline-offset: 3px; }
@@ -216,19 +216,40 @@ section > h2 + .lead.sub { margin-top: -10px; }
 .desk .lead { margin-top: 16px; }
 .desk .fine { margin-top: 14px; }
 @media (max-width: 720px) { .desk { grid-template-columns: 1fr; } }
-.deskart { position: relative; height: 300px; border-radius: var(--radius); background: linear-gradient(180deg, #2f2a24, #1c1915); border: 1px solid rgba(255, 255, 255, .06); overflow: hidden; }
-.deskart .win { position: absolute; left: 24px; top: 28px; right: 164px; bottom: 28px; border-radius: 10px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .08); }
-.deskart .win i { position: absolute; left: 12px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, .18); box-shadow: 14px 0 0 rgba(255, 255, 255, .18), 28px 0 0 rgba(255, 255, 255, .18); }
-.deskart .win span { position: absolute; left: 14px; right: 14px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, .08); }
-.deskart .panel { position: absolute; right: 16px; bottom: 158px; display: flex; align-items: center; gap: 12px; background: var(--cream2); color: var(--ink2); border-radius: 14px 14px 4px 14px; padding: 10px 12px; font-family: var(--mono); font-size: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, .35); white-space: nowrap; }
-.deskart .panel b { font-weight: 400; background: var(--ink); color: var(--cream); border-radius: 999px; padding: 6px 10px; }
-.deskart .buddy { position: absolute; right: 14px; bottom: 18px; width: 128px; height: 128px; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .4)); animation: idle 3.2s ease-in-out infinite; }
-@keyframes idle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
-@media (prefers-reduced-motion: reduce) { .deskart .buddy { animation: none; } }
-@media (max-width: 480px) { .deskart { height: 320px; } .deskart .win { right: 24px; bottom: 190px; } }
-.shot { margin: 0; display: grid; gap: 12px; }
-.shot .deskart { height: 320px; }
-.shot figcaption { font-family: var(--mono); font-size: 12px; color: var(--soft); }
+/* the live desk: the desktop app's own banana on a pretend screen (web/desk/, desktop/src/site.ts), with the cast to
+   pick from and the days to pretend. The pixels stay whole: the picker's sprites are 64 px, a divisor of 256. */
+.desk.live { grid-template-columns: 1fr; gap: 28px; }
+.desk.live .desk-copy { max-width: 760px; }
+.desklive { margin: 0; display: grid; gap: 14px; }
+.deskscreen {
+  position: relative; aspect-ratio: 16 / 10; border-radius: var(--radius); overflow: hidden; background: #efdcb4;
+  border: 1px solid var(--glass-border); box-shadow: 0 24px 60px rgba(110, 74, 31, .16), 0 2px 8px rgba(110, 74, 31, .08);
+}
+.deskscreen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.deskpick { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+.deskpick button {
+  appearance: none; border: 1px solid transparent; background: transparent; border-radius: 16px; padding: 4px; cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.deskpick button:hover { background: var(--glass); transform: translateY(-2px); }
+.deskpick button[aria-checked="true"] { background: var(--cream2); border-color: var(--banana-deep); }
+.deskpick img { width: 64px; height: 64px; }
+.deskdays { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; font-family: var(--mono); font-size: 12px; color: var(--soft); }
+.deskdays span { margin-right: 4px; }
+.deskdays button {
+  appearance: none; font: inherit; color: var(--ink); background: var(--glass); border: 1px solid var(--glass-border);
+  border-radius: 999px; padding: 7px 12px; cursor: pointer; transition: background .15s ease, color .15s ease;
+}
+.deskdays button:hover { background: var(--cream2); }
+.deskdays button[aria-checked="true"] { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.desklive figcaption { font-family: var(--mono); font-size: 12px; line-height: 1.7; color: var(--soft); text-align: center; max-width: 70ch; margin: 0 auto; }
+@media (max-width: 640px) {
+  .deskscreen { aspect-ratio: 3 / 4; }
+  /* one row that scrolls sideways, so the screen stays in view while you pick */
+  .deskpick { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .deskpick::-webkit-scrollbar { display: none; }
+  .deskpick button { flex: none; }
+}
 
 /* yours */
 .yours .facts { max-width: 720px; }
@@ -252,11 +273,16 @@ section > h2 + .lead.sub { margin-top: -10px; }
 .proof span { font-family: var(--mono); font-size: 12px; color: var(--soft); }
 .phone-shot { margin: 0; border-radius: 18px; overflow: hidden; background: var(--paper); border: 1px solid var(--glass-border); box-shadow: 0 16px 36px rgba(110, 74, 31, 0.12); }
 .phone-shot img { width: 100%; height: auto; display: block; }
-/* five product shots now stack down the home page. uncapped they run near 1000px each and every
-   section grows a hole beside its text, so cap the frame and crop from the bottom of the phone. */
-.paper-split .phone-shot { max-height: 560px; overflow: hidden; }
-.paper-split .phone-shot img { object-fit: cover; object-position: top; }
+/* the product shots (the life journal pass, 2026-09-26): whole phone screens at phone size, never cropped, because the
+   alt text names buttons at the bottom of a screen. Capped by width instead, so a shot runs about 650 px tall. */
+.paper-split .phone-shot, .hero > .phone-shot { justify-self: center; width: 100%; max-width: 300px; }
 .paper-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; }
+.paper-split h2 + .lead, .paper-split h3 + .lead { margin-top: 16px; }
+.paper-split .facts { margin-top: 18px; }
+.paper-split .fine { margin-top: 16px; }
+.paper-split + .school-grid { margin-top: 36px; }
+.school-grid + .fine { margin-top: 20px; }
+.sub-h { font-size: clamp(28px, 3.6vw, 36px); }
 /* three splits stack on the home page, so the middle one mirrors and the page stops feeling like a column of cards. */
 .paper-split.flip { grid-template-columns: 0.9fr 1.1fr; }
 .paper-split.flip > div { order: 2; }
@@ -274,6 +300,39 @@ section > h2 + .lead.sub { margin-top: -10px; }
 @media (max-width: 720px) {
   .audiences ul, .proof ul, .school-grid, .plans ul { grid-template-columns: 1fr; }
 }
+
+/* a shot with a line under it: the two trees, and home while the banana is away */
+.shot-cap { margin: 0; display: grid; gap: 12px; align-content: start; justify-items: center; }
+.shot-cap .phone-shot { width: 100%; }
+.shot-cap figcaption { font-family: var(--mono); font-size: 12px; line-height: 1.6; color: var(--soft); text-align: center; max-width: 34ch; text-wrap: balance; }
+.shot-cap figcaption b { display: block; font-weight: 400; font-size: 13px; color: var(--ink); margin-bottom: 2px; }
+.scene .shot-cap { justify-self: center; align-self: center; width: 100%; max-width: 300px; }
+
+/* the memory tree: its own glass panel, the words beside the young tree and the grown one (tree-young, tree-full) */
+.tree {
+  display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 44px; align-items: center; margin: 32px 0; padding: 44px 36px;
+  border-radius: 28px; background: var(--glass); border: 1px solid var(--glass-border);
+  backdrop-filter: blur(24px) saturate(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 18px 40px rgba(110, 74, 31, 0.10);
+}
+.tree .lead { margin-top: 16px; }
+.tree-copy > p:not([class]) { margin: 14px 0 0; color: var(--ink2); }
+.tree .rules { margin-top: 22px; }
+.growth { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 960px) {
+  .tree { grid-template-columns: 1fr; padding: 36px 24px; }
+  .growth { width: 100%; max-width: 600px; margin: 0 auto; }
+}
+@media (max-width: 720px) { .tree { padding: 28px 16px; margin: 16px 0; } .growth { gap: 12px; } }
+
+/* four of the app's own prompts as cards, in the serif the headings use */
+.asks { list-style: none; margin: 0 0 48px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.asks li {
+  padding: 22px 20px; border-radius: 18px; background: var(--cream2); border: 1px solid var(--glass-border);
+  font-family: var(--serif); font-size: 22px; line-height: 1.2; color: var(--ink); box-shadow: 0 8px 20px rgba(110, 74, 31, 0.06);
+}
+@media (max-width: 960px) { .asks { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .asks { grid-template-columns: 1fr; } }
 
 /* price */
 .price { text-align: center; display: grid; gap: 18px; justify-items: center; }
