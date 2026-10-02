@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add("js")</script>
 <title>skriblio, rogue</title>
-<meta name="description" content="leave it long enough and it may go rogue. skriblio is a life journal with a pixel banana that does strange things at home when you go quiet." />
+<meta name="description" content="leave it long enough and it may go rogue. skriblio is a life journal with a pixel banana that goes bananas at home when you go quiet." />
 <link rel="canonical" href="https://skriblio.com/rogue/" />
 <link rel="icon" href="../favicon.png?v=ned" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="../assets/icon-180.png" />
@@ -12,7 +13,7 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="skriblio, rogue" />
-<meta property="og:description" content="leave it long enough and it may go rogue. skriblio is a life journal with a pixel banana that does strange things at home when you go quiet." />
+<meta property="og:description" content="leave it long enough and it may go rogue. skriblio is a life journal with a pixel banana that goes bananas at home when you go quiet." />
 <meta property="og:url" content="https://skriblio.com/rogue/" />
 <meta property="og:image" content="https://skriblio.com/assets/og.png" />
 <meta property="og:image:width" content="1200" />
@@ -20,7 +21,7 @@
 <meta property="og:image:alt" content="a journal with a banana in it. ned is a round pixel banana on cream." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="skriblio, rogue" />
-<meta name="twitter:description" content="leave it long enough and it may go rogue. skriblio is a life journal with a pixel banana that does strange things at home when you go quiet." />
+<meta name="twitter:description" content="leave it long enough and it may go rogue. skriblio is a life journal with a pixel banana that goes bananas at home when you go quiet." />
 <meta name="twitter:image" content="https://skriblio.com/assets/og.png" />
 <meta name="twitter:image:alt" content="a journal with a banana in it. ned is a round pixel banana on cream." />
 <meta name="theme-color" content="#F6EBD2" />
@@ -39,13 +40,11 @@
     <a class="wordmark" href="../"><img class="px" src="../img/faces/ned-board.png" alt="" width="32" height="32" />skriblio</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
     <nav class="main" id="nav" aria-label="site">
+      <a href="../download/">download</a>
       <a href="../#paper">paper journal</a>
       <a href="../#tree">memory tree</a>
       <a href="../#school">journal school</a>
       <a href="../#rogue">rogue mode</a>
-      <a href="../privacy/">privacy</a>
-      <a href="../support/">support</a>
-      <a href="../download/">download</a>
     </nav>
   </div>
 </header>
@@ -55,20 +54,20 @@
   <div class="copy">
     <p class="kicker">rogue mode</p>
     <h1 id="h">leave it long enough and it may go rogue.</h1>
-    <p class="lead">skriblio is a life journal for your notebook, your voice and your phone, with a pixel banana living in it. after two quiet days the banana starts getting ideas, and from the fifth it does something strange every day.</p>
+    <p class="lead">skriblio is a life journal for your notebook, your voice and your phone, with a pixel banana living in it. leave it a few days and the banana gets restless, and from the fifth day it goes bananas.</p>
     <div class="badges"><a class="badge" href="../download/">download</a></div>
     <p class="fine">pick a plan and the first two weeks are free. after that it's $49.99 a year or $9.99 a month, and both plans include the desktop companion.</p>
   </div>
-  <figure class="phone-shot"><img src="../img/product/rogue.jpg?v=life" alt="the skriblio home screen after five quiet days, with coat still standing in the middle. its line says 'i've gone strange, and my coat is staying on'. under it the last of five dots is filled, with 'coat has gone bananas, and one page calms it down'. the button says 'journal and calm it down'." width="330" height="714" fetchpriority="high" /></figure>
+  <figure class="phone-shot"><img src="../img/product/rogue.jpg?v=life" alt="the skriblio home screen after five quiet days, with ned standing on his head. his line says 'all the blood's rushing to my head'. under it the last of five dots is filled, with 'ned has gone bananas, and one page calms it down'. the button says 'journal and calm it down'." width="330" height="714" fetchpriority="high" /></figure>
 </section>
 <section aria-labelledby="facts-h">
   <h2 id="facts-h">what you get</h2>
   <ul class="rules">
     <li>skriblio never sends notifications, and there's no streak to keep or make up for.</li>
-    <li>by the fourth day it has gone rogue, and after that it might stand on its head or start hopping about.</li>
+    <li>by the fourth day it has gone rogue, and after that it runs about, bounces off the walls and stands on its head.</li>
     <li>it never leaves, so you can always see what it's up to, on your home screen widget, in the app and on your computer.</li>
     <li>any page calms it straight down, whether it's typed, a photo of your notebook or a voice note.</li>
-    <li>your banana only knows which days you journaled, and it never sees what you write.</li>
+    <li>your banana only knows which days you journaled, never what's in your journal.</li>
   </ul>
   
   <p class="fine">the rest of skriblio, from the memory tree to the desk banana, is on the <a href="../">home page</a>.</p>
@@ -93,7 +92,6 @@
 </footer>
 <script>
 (function(){var b=document.querySelector(".menu"),n=document.getElementById("nav");if(!b||!n)return;
-document.documentElement.classList.add("js");
 b.addEventListener("click",function(){var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));n.classList.toggle("open",!o);b.textContent=o?"menu":"close";});
 n.addEventListener("click",function(e){if(e.target.tagName==="A"){b.setAttribute("aria-expanded","false");n.classList.remove("open");b.textContent="menu";}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&n.classList.contains("open")){b.click();b.focus();}});})();
