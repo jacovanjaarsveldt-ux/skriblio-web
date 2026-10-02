@@ -83,8 +83,16 @@
   var isAndroid = /Android/.test(ua);
   var line = document.getElementById("line"), fine = document.getElementById("fine"), qrs = document.getElementById("qrs");
   var a = document.getElementById("ios"), g = document.getElementById("android");
-  if (isIOS && ios) { line.textContent = "you're on an iphone, so it's one tap."; g.hidden = true; if (qrs) qrs.hidden = true; location.replace(ios); return; }
-  if (isAndroid && play) { line.textContent = "you're on android, so it's one tap."; a.hidden = true; if (qrs) qrs.hidden = true; location.replace(play); return; }
+  // the visit is counted before the phone goes to the store: this is the link in the social bios, and leaving at once
+  // meant analytics never saw most of it (2026-10-02). The store opens within a second whatever happens.
+  function go(url, store) {
+    var gone = false;
+    function leave() { if (!gone) { gone = true; location.replace(url); } }
+    try { gtag("event", "store_redirect", { store: store, transport_type: "beacon", event_callback: leave }); } catch (e) {}
+    setTimeout(leave, 800);
+  }
+  if (isIOS && ios) { line.textContent = "you're on an iphone, so it's one tap."; g.hidden = true; if (qrs) qrs.hidden = true; go(ios, "app_store"); return; }
+  if (isAndroid && play) { line.textContent = "you're on android, so it's one tap."; a.hidden = true; if (qrs) qrs.hidden = true; go(play, "google_play"); return; }
   line.textContent = "point your phone at the code, or pick a store.";
   fine.textContent = "pick a plan and the first two weeks are free, on iphone and android.";
 })();
