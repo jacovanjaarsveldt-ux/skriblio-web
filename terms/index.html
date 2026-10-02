@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add("js")</script>
 <title>skriblio, terms</title>
 <meta name="description" content="the terms for using skriblio. plain words, short." />
 <link rel="canonical" href="https://skriblio.com/terms/" />
@@ -39,13 +40,11 @@
     <a class="wordmark" href="../"><img class="px" src="../img/faces/ned-board.png" alt="" width="32" height="32" />skriblio</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
     <nav class="main" id="nav" aria-label="site">
+      <a href="../download/">download</a>
       <a href="../#paper">paper journal</a>
       <a href="../#tree">memory tree</a>
       <a href="../#school">journal school</a>
       <a href="../#rogue">rogue mode</a>
-      <a href="../privacy/">privacy</a>
-      <a href="../support/">support</a>
-      <a href="../download/">download</a>
     </nav>
   </div>
 </header>
@@ -98,7 +97,6 @@
 </footer>
 <script>
 (function(){var b=document.querySelector(".menu"),n=document.getElementById("nav");if(!b||!n)return;
-document.documentElement.classList.add("js");
 b.addEventListener("click",function(){var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));n.classList.toggle("open",!o);b.textContent=o?"menu":"close";});
 n.addEventListener("click",function(e){if(e.target.tagName==="A"){b.setAttribute("aria-expanded","false");n.classList.remove("open");b.textContent="menu";}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&n.classList.contains("open")){b.click();b.focus();}});})();

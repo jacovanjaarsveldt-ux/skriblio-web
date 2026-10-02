@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add("js")</script>
 <title>skriblio for windows</title>
 <meta name="description" content="the desktop companion for windows: your banana on your computer screen while you work, connected to the phone app." />
 <link rel="canonical" href="https://skriblio.com/windows/" />
@@ -39,13 +40,11 @@
     <a class="wordmark" href="../"><img class="px" src="../img/faces/ned-board.png" alt="" width="32" height="32" />skriblio</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
     <nav class="main" id="nav" aria-label="site">
+      <a href="../download/">download</a>
       <a href="../#paper">paper journal</a>
       <a href="../#tree">memory tree</a>
       <a href="../#school">journal school</a>
       <a href="../#rogue">rogue mode</a>
-      <a href="../privacy/">privacy</a>
-      <a href="../support/">support</a>
-      <a href="../download/">download</a>
     </nav>
   </div>
 </header>
@@ -54,7 +53,7 @@
 <section class="hero tight" aria-labelledby="h">
   <div class="copy">
     <h1 id="h">the banana, on windows.</h1>
-    <p class="lead">the desktop companion puts your banana on your computer screen while you work. click it and a page opens, and what you write there goes into the same vault as your phone.</p>
+    <p class="lead">the desktop companion puts your banana on your computer screen while you work. click it and a page opens, and what you journal there goes into the same vault as your phone.</p>
     <div class="badges"><a class="badge" href="https://skriblio.com/windows/skriblio-setup.exe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg><span>download for windows</span></a></div>
     <p class="fine">it comes with both plans and needs the phone app. this is an early build that isn't signed yet, so windows asks once before it opens, and the steps are below.</p>
   </div>
@@ -73,18 +72,17 @@
 <section aria-labelledby="day-h">
   <h2 id="day-h">a day with it</h2>
   <ul class="rules">
-    <li>it opens by itself when your computer starts and walks onto the screen some time into your work, unless you've journaled that day.</li>
+    <li>it opens by itself when your computer starts and walks onto the screen a minute or two later, on days you haven't journaled yet.</li>
     <li>you can turn off 'open when the computer starts' from its icon in the taskbar, next to the clock, if you'd rather open it yourself.</li>
     <li>it walks and runs about, climbs onto your windows, sits on top of them and peeks out from behind them.</li>
     <li>moe, the monk, floats cross legged instead of walking, and kit gets about in small hops.</li>
     <li>you can pick it up and put it somewhere else, or throw it and watch it bounce off the edge of the screen.</li>
     <li>it keeps still while you're in a call, and at night it takes a nap.</li>
     <li>click it and a small card opens with its line, a 'journal' button and a 'not now' button.</li>
-    <li>'journal' opens a cream page with a question to start from, and what you write goes into the same vault as your phone.</li>
-    <li>'not now' sends it off for half an hour or so, and then it comes back with something to say.</li>
+    <li>'journal' opens a cream page with a question to start from, and what you journal there goes into the same vault as your phone.</li>
+    <li>'not now' sends it off the screen, and it comes back in about an hour.</li>
     <li>once you've journaled, it dances in a burst of confetti and walks off the screen until tomorrow.</li>
-    <li>after two quiet days it starts getting ideas, and on the fifth it leaves a postcard where it used to stand.</li>
-    <li>while it's away, it looks in from the edge of the screen now and then.</li>
+    <li>after a few quiet days it gets restless, and from the fifth it stays on your screen and goes bananas.</li>
   </ul>
 </section>
 
@@ -178,7 +176,6 @@
 </footer>
 <script>
 (function(){var b=document.querySelector(".menu"),n=document.getElementById("nav");if(!b||!n)return;
-document.documentElement.classList.add("js");
 b.addEventListener("click",function(){var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));n.classList.toggle("open",!o);b.textContent=o?"menu":"close";});
 n.addEventListener("click",function(e){if(e.target.tagName==="A"){b.setAttribute("aria-expanded","false");n.classList.remove("open");b.textContent="menu";}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&n.classList.contains("open")){b.click();b.focus();}});})();
