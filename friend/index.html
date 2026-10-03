@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Journal with a friend: where an invite link lands (docs/features/friends.md). Handwritten like accept/, not made by
+     scripts/site-html.mjs. The code rides after the #, so it never reaches the server, a log or a link preview. No
+     analytics on this page. -->
+<meta name="robots" content="noindex" />
+<title>journal with a friend</title>
+<meta name="description" content="a friend invited you to journal in skriblio." />
+<link rel="icon" href="../favicon.png?v=ned" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="../assets/icon-180.png" />
+<meta property="og:site_name" content="skriblio" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="journal with a friend" />
+<meta property="og:description" content="a friend invited you to journal in skriblio." />
+<meta property="og:image" content="https://skriblio.com/assets/og.png" />
+<meta name="theme-color" content="#F6EBD2" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../site.css?v=life" />
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <a class="wordmark" href="../"><img class="px" src="../img/faces/ned-board.png" alt="" width="32" height="32" />skriblio</a>
+  </div>
+</header>
+<main class="wrap" id="main">
+<section class="hero tight" aria-labelledby="h">
+  <div class="copy">
+    <h1 id="h">journal with a friend.</h1>
+    <p class="lead">a friend invited you to journal in skriblio. if you say yes, your banana sits beside theirs. each of you sees the other's banana, its name and whether they journaled today, and never a page.</p>
+    <p><a class="badge" id="open" href="../download/" hidden>open in skriblio</a></p>
+    <p class="fine" id="none" hidden>this link is missing its code. ask your friend to send it again.</p>
+  </div>
+</section>
+<section class="two" aria-labelledby="new-h">
+  <div class="glass">
+    <h2 id="new-h">new to skriblio?</h2>
+    <p>get it from the <a href="https://apps.apple.com/app/id6807967868">app store</a> or <a href="https://play.google.com/store/apps/details?id=com.steadylabs.skriblio.app">google play</a> and sign up. you get the same two free weeks as anyone. then come back to your friend's message and tap the link again.</p>
+  </div>
+  <div class="glass">
+    <h2>if the button does nothing</h2>
+    <p>in skriblio, open 'you', then 'journal with a friend', tap 'have a link from a friend?' and paste the link your friend sent.</p>
+  </div>
+</section>
+<script>
+(function () {
+  // the alphabet and length mirror src/features/friends/logic.ts
+  var code = (location.hash || "").replace(/^#/, "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+  var ok = code.length === 10 && /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]+$/.test(code);
+  var open = document.getElementById("open"), none = document.getElementById("none");
+  if (!ok) { none.hidden = false; return; }
+  open.href = "skriblio://friends?code=" + code;
+  open.hidden = false;
+})();
+</script>
+</main>
+<footer class="bottom">
+  <div class="wrap">
+    <nav aria-label="footer">
+      <a href="../privacy/">privacy</a>
+      <a href="../terms/">terms</a>
+      <a href="../support/">support</a>
+    </nav>
+    <p>skriblio is made by steady labs (pty) ltd.</p>
+  </div>
+</footer>
+</body>
+</html>
