@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["4K98X7ZSVY.com.steadylabs.skriblio.app"],
+        "components": [
+          { "/": "/compose", "comment": "a new page, from the widget controls (docs/41, decisions G1)" }
+        ]
+      }
+    ]
+  }
+}

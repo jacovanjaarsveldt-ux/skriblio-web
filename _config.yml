@@ -1,0 +1,2 @@
+# GitHub Pages leaves out folders that start with a dot; the association file for the widget controls lives in one.
+include: [".well-known"]
