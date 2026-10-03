@@ -84,7 +84,7 @@
 
   function finished(friend, banana) {
     $("done-title").textContent = `noted, ${friend}.`;
-    $("done-body").textContent = `${banana} may write if your friend goes quiet. one friend hears after five quiet days, then another every four days, each once, later if alone, and it stops when they write. never what they wrote. reply mute to any message to stop.`;
+    $("done-body").textContent = `${banana} may write if your friend goes quiet. one friend hears when they've been quiet for a while, and if it goes on, another one does. each friend hears once, or a few times far apart if there's only one, and it stops when they write. never what they wrote. reply mute to any message to stop.`;
     show("done");
   }
 
