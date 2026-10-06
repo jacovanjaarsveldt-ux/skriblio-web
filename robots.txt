@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /accept/
+Disallow: /f/
 Disallow: /rogue/
 Disallow: /clarity/
 Disallow: /paper/
