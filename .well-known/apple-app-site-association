@@ -2,9 +2,21 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["4K98X7ZSVY.com.steadylabs.skriblio.app"],
+        "appIDs": [
+          "4K98X7ZSVY.com.steadylabs.skriblio.app"
+        ],
         "components": [
-          { "/": "/compose", "comment": "a new page, from the widget controls (docs/41, decisions G1)" }
+          {
+            "/": "/compose",
+            "comment": "a new page, from the widget controls (docs/41, decisions G1)"
+          },
+          {
+            "/": "/f/*",
+            "?": {
+              "t": "*"
+            },
+            "comment": "a friend's invite opens the accept screen (docs/features/friends.md, WP-F1); an offer code (?c=) stays on the web page"
+          }
         ]
       }
     ]
