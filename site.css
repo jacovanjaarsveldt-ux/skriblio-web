@@ -412,6 +412,22 @@ footer.bottom nav a { padding: 4px 0; }
 footer.bottom nav a:hover { color: var(--ink); }
 footer.bottom p { margin: 0; }
 
-/* the friend invite's three steps: big, numbered, impossible to miss (2026-10-08) */
-.steps { margin: 18px 0 8px; padding-left: 1.4em; display: grid; gap: 10px; font-size: 1.05rem; line-height: 1.45; }
-.steps li::marker { font-weight: 600; }
+/* the friend invite page /f/ (2026-10-08): one column, mobile first, the three steps large */
+.fp { display: grid; gap: 22px; justify-items: center; text-align: center; padding: 28px 0 40px; max-width: 640px; margin: 0 auto; }
+.fp[hidden], .fp [hidden] { display: none; }
+.fp h1 { font-size: clamp(2.2rem, 8vw, 3.4rem); }
+.fp .lead { margin: 0 auto; }
+.fp-bananas { display: flex; justify-content: center; align-items: flex-end; gap: 4px; }
+.fp-bananas img { width: 128px; height: 128px; image-rendering: pixelated; filter: drop-shadow(0 14px 18px rgba(110, 74, 31, 0.18)); }
+.fp-how { display: grid; gap: 16px; width: 100%; }
+.fp-how h2 { font-size: 1.7rem; }
+.fp-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; text-align: left; }
+.fp-steps li { display: grid; grid-template-columns: 56px 1fr; gap: 16px; align-items: start; padding: 20px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 12px 30px rgba(110, 74, 31, 0.08); }
+.fp-n { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--banana); color: var(--ink); font-family: var(--serif); font-size: 2rem; line-height: 1; }
+.fp-steps b { display: block; font-weight: 600; font-size: 1.15rem; line-height: 1.3; color: var(--ink); }
+.fp-steps p { margin: 6px 0 0; font-size: 1rem; line-height: 1.5; color: var(--ink2); }
+.fp-steps .fp-code { display: inline-block; margin-top: 10px; padding: 8px 16px; font-family: var(--mono); font-size: 1.6rem; letter-spacing: 0.12em; background: var(--ink); color: var(--cream); border-radius: 12px; }
+.fp-sees { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%; text-align: left; }
+.fp-sees h2 { font-size: 1.35rem; margin-bottom: 10px; }
+.fp-sees ul { margin: 0 0 10px; padding-left: 1.1em; display: grid; gap: 6px; color: var(--ink2); font-size: 1rem; }
+@media (max-width: 560px) { .fp-sees { grid-template-columns: 1fr; } .fp-steps li { grid-template-columns: 44px 1fr; padding: 16px; } .fp-n { width: 44px; height: 44px; font-size: 1.6rem; } }
