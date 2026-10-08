@@ -431,3 +431,9 @@ footer.bottom p { margin: 0; }
 .fp-sees h2 { font-size: 1.35rem; margin-bottom: 10px; }
 .fp-sees ul { margin: 0 0 10px; padding-left: 1.1em; display: grid; gap: 6px; color: var(--ink2); font-size: 1rem; }
 @media (max-width: 560px) { .fp-sees { grid-template-columns: 1fr; } .fp-steps li { grid-template-columns: 44px 1fr; padding: 16px; } .fp-n { width: 44px; height: 44px; font-size: 1.6rem; } }
+/* the friend invite's three steps: big, numbered, impossible to miss (2026-10-08) */
+.steps { margin: 18px 0 8px; padding-left: 1.4em; display: grid; gap: 10px; font-size: 1.05rem; line-height: 1.45; }
+.steps li::marker { font-weight: 600; }
+
+.school-grid.worlds { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .school-grid.worlds { grid-template-columns: 1fr; } }
