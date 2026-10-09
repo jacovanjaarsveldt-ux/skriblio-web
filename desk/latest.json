@@ -1,0 +1,19 @@
+{
+  "version": "0.1.5",
+  "notes": "update now, a tap away. small fixes.",
+  "pub_date": "2026-10-08T03:31:36Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVI2TFJIQmllT1lGT2dFWE1YUVVRV2h6OWUrcytZRFhNb3VXUitBQXZndDN4a3MzTW9GTDhaaVlFL2l0K0J0eXhnWVFEQmt0ZWhnaE5RTGJBeEkwb1FZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNDU4NDQ2CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS41CnZPcFQrUWlaZlgxK2Z3MFkwcjBqc3F0VjZPWWpzUUFMcDQ3UHRLRFVRazJwWmhiZjJGOHVFRmxRc2JxSnFSeDFvL1ZZZU9tSGR4emprUm9BUFRUeURRPT0K",
+      "url": "https://skriblio.com/desk/0.1.5/Skriblio_aarch64.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVd6YU9yck9TbWN3MlljbEI4Z3pVYmI5Z1crWWtkNTJiek1IYkFEcGhoWk1XNHdCRllyaS9WVFVvU2h4OGRRWS9vbVBUcUw0VTBlQWlmSDl1a1cxK3dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNDU4NTkzCWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS41CmVaRVUwQ21aMmZQemNqNndaV1hlVzE3c2YyeTgxbEtFSWZ4eDNrUnZrOGtNNmR2aGxOQWdNK0RZYkN0VVQ2eHNURXdybGJSK1dmUFNhVkNTaHlUa0N3PT0K",
+      "url": "https://skriblio.com/desk/0.1.5/Skriblio_x64.app.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVMzYXJoNFhPajh4UVdBRDU0d3prZklnQU41cDN3YXl2clVGMnRCU3dLMzhqa3hPNnAvcDR3alp0ZDg1WWNIbGc2NlgyV2V3SjZyZTlIb3ZVN3RvVHdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNDMwMjExCWZpbGU6U2tyaWJsaW9fMC4xLjVfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMS41CmsxTXhRRVc3ZVdib0QxUytpdTQzVWowME9icmZFZS9DZlZYL0pXRkI3a2VJcmhFRUtudGN1QmpWeHIxUjBRdmY2a20yUDZmTHNQVEl2dVltTm55SkFRPT0K",
+      "url": "https://skriblio.com/desk/0.1.5/Skriblio_0.1.5_x64-setup.exe"
+    }
+  }
+}
