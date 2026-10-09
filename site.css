@@ -509,3 +509,53 @@ body.home main { overflow-x: clip; }
   .hm-worlds { justify-content: center; overflow: visible; width: 100%; max-width: 100%; padding: 6px 0 28px; }
   .hm-worlds li { flex: 1 1 0; max-width: 240px; }
 }
+
+/* the inner pages (2026-10-09): the same parts as the homepage, a few more */
+.hm-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--soft); margin: 0; }
+.hm-hero.solo { padding-bottom: 8px; }
+.hm-hero .hm-art { display: flex; justify-content: center; }
+.hm-hero .hm-art img { width: 256px; height: 256px; filter: drop-shadow(0 18px 24px rgba(110, 74, 31, 0.18)); }
+.hm-hero .hm-art .peel.big { width: 112px; height: 112px; image-rendering: pixelated; }
+.hm-hero .qrs { justify-content: center; margin-top: 10px; }
+.hm-sm { padding-top: 56px; }
+.hm-copy.wide { max-width: 40rem; }
+.hm-copy.wide > h2 { text-align: center; }
+.hm-list.plain { margin-top: 0; }
+.hm-list.plain li { display: block; }
+.hm-list.plain li:first-child { border-top: 0; }
+.hm-list.plain li > span { font-size: 17px; }
+.hm-sprite { display: grid; place-items: center; aspect-ratio: 1 / 1.1; background: var(--cream2); }
+.hm-sprite img { width: 200px; height: 200px; filter: drop-shadow(0 14px 18px rgba(110, 74, 31, 0.18)); }
+.hm-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; width: 100%; max-width: 44rem; margin: 0 auto; justify-items: stretch; }
+.hm-card { text-align: left; padding: 32px 26px; border-radius: 30px; background: var(--glass); border: 1px solid var(--glass-border); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 18px 40px rgba(110, 74, 31, 0.10); }
+.hm-card h2, .hm-card h3 { font-size: 30px; line-height: 1.1; margin-bottom: 12px; }
+.hm-card p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink2); }
+.hm-card .facts li { grid-template-columns: 96px 1fr; padding: 10px 0; font-size: 15px; }
+.hm-card .hm-list { border-top: 0; }
+.hm-card .hm-list.plain li { padding: 12px 0; }
+.hm-live { width: 100%; max-width: 820px; }
+.hm-center-block { padding-top: 24px; }
+.hm-center-block .hm-lead + .hm-lead { margin-top: 18px; }
+.hm-faq summary { font-size: 21px; }
+.hm-faq details p a, .hm-copy p a, .hm-lead a { text-decoration: underline; text-decoration-color: var(--banana); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.hm .hm-lead.hm-center { margin-left: auto; margin-right: auto; text-align: center; }
+/* the friend invite, in the same voice */
+.fp { padding-top: 28px; }
+.fp h1 { font-size: clamp(40px, 10.5vw, 60px); line-height: 1.03; }
+.fp .hm-lead { margin: 0 auto; }
+.fp-sees .hm-card { padding: 22px 20px; }
+.fp-sees .hm-card h2 { font-size: 24px; }
+.hm-end > .hm-faq { margin-top: 0; }
+@media (min-width: 720px) {
+  .hm-cards { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (min-width: 900px) {
+  .hm-hero.solo { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+  .hm-hero.solo .hm-hero-copy { justify-items: center; }
+  .hm-hero.solo .badges { justify-content: center; }
+  .hm-hero.solo .fine { text-align: center; margin: 0 auto; }
+  .hm-sm { padding-top: 88px; }
+}
+.hm-card .fine { font-size: 12px; line-height: 1.7; color: var(--soft); margin-top: 8px; }
+.hm-hero .hm-art img[width="128"] { width: 128px; height: 128px; }
+.fp-sees .fine { margin-top: 10px; }

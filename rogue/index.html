@@ -4,24 +4,24 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>document.documentElement.classList.add("js")</script>
-<title>skriblio, rogue</title>
-<meta name="description" content="leave it long enough and it may go rogue. skriblio is a life journal with a banana that goes bananas at home when you go quiet." />
+<title>skriblio, rogue mode</title>
+<meta name="description" content="leave it long enough and your banana goes rogue. it lives on your home screen, gets restless when you go quiet, and calms down as soon as you journal." />
 <link rel="canonical" href="https://skriblio.com/rogue/" />
 <link rel="icon" href="../favicon.png?v=ned" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="../assets/icon-180.png" />
 <meta property="og:site_name" content="skriblio" />
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="skriblio, rogue" />
-<meta property="og:description" content="leave it long enough and it may go rogue. skriblio is a life journal with a banana that goes bananas at home when you go quiet." />
+<meta property="og:title" content="skriblio, rogue mode" />
+<meta property="og:description" content="leave it long enough and your banana goes rogue. it lives on your home screen, gets restless when you go quiet, and calms down as soon as you journal." />
 <meta property="og:url" content="https://skriblio.com/rogue/" />
 <meta property="og:image" content="https://skriblio.com/assets/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="a journal with a banana in it. ned is a round banana on cream." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="skriblio, rogue" />
-<meta name="twitter:description" content="leave it long enough and it may go rogue. skriblio is a life journal with a banana that goes bananas at home when you go quiet." />
+<meta name="twitter:title" content="skriblio, rogue mode" />
+<meta name="twitter:description" content="leave it long enough and your banana goes rogue. it lives on your home screen, gets restless when you go quiet, and calms down as soon as you journal." />
 <meta name="twitter:image" content="https://skriblio.com/assets/og.png" />
 <meta name="twitter:image:alt" content="a journal with a banana in it. ned is a round banana on cream." />
 <meta name="theme-color" content="#F6EBD2" />
@@ -29,63 +29,91 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
 <link rel="preload" href="../assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
-<link rel="stylesheet" href="../site.css?v=home2612" />
+<link rel="stylesheet" href="../site.css?v=site2613" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EQ5FSL2TK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">skip to content</a>
 <header class="top">
   <div class="in">
     <a class="wordmark" href="../"><img class="px" src="../img/faces/ned-board.png" alt="" width="32" height="32" />skriblio</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
     <nav class="main" id="nav" aria-label="site">
+      <a href="../">home</a>
       <a href="../download/">download</a>
-      <a href="../#paper">paper journal</a>
-      <a href="../#tree">memory tree</a>
-      <a href="../#rogue">rogue mode</a>
+      <a href="../paper/">on paper</a>
+      <a href="../rogue/" aria-current="page">rogue mode</a>
+      <a href="../desktop/">the desktop companion</a>
+      <a href="../support/">support</a>
     </nav>
   </div>
 </header>
 <main class="wrap" id="main">
 
-<section class="hero tight" aria-labelledby="h">
-  <div class="copy">
-    <p class="kicker">rogue mode</p>
-    <h1 id="h">leave it long enough and it may go rogue.</h1>
-    <p class="lead">skriblio is a life journal for your notebook, your voice and your phone, with a banana living in it. leave it a couple of days and the banana gets restless, and if you stay away for a while it goes bananas.</p>
-    <div class="badges"><a class="badge" href="../download/">download</a></div>
-    <p class="fine">pick a plan and the first two weeks are free. after that it's $49.99 a year or $9.99 a month, and both plans include the desktop companion. skriblio is for people aged 16 and over.</p>
+<section class="hm-hero solo" aria-labelledby="h">
+  <div class="hm-hero-copy">
+    <p class="hm-label">rogue mode</p>
+    <h1 id="h">leave it long enough and your banana goes rogue.</h1>
+    <p class="hm-lead">your banana lives on your home screen. when you journal, it's calm. after a couple of quiet days it gets restless, and if you stay away for a while it goes rogue.</p>
+    <div class="badges"><a class="badge" href="https://apps.apple.com/app/id6807967868"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg><span>app store</span></a><a class="badge" href="https://play.google.com/store/apps/details?id=com.steadylabs.skriblio.app"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg><span>google play</span></a></div>
+    <p class="fine">free for two weeks, then $49.99 a year or $9.99 a month. for iphone and android.</p>
+    
   </div>
-  <figure class="phone-shot"><img src="../img/product/rogue.jpg?v=110" alt="the skriblio home screen after a while without journaling, with ned standing on his head and the 'journal' button cracked under him. the line says 'whenever you feel like it, tap 'journal' and start with one line.'" width="330" height="714" fetchpriority="high" /></figure>
-</section>
-<section aria-labelledby="facts-h">
-  <h2 id="facts-h">what you get</h2>
-  <ul class="rules">
-    <li>stay away for a while and it goes rogue. it runs about, bounces off the walls and stands on its head.</li>
-    <li>it never leaves, so you can always see what it's up to, on your home screen widget, in the app and on your computer.</li>
-    <li>any page calms it straight down, whether it's typed, a photo of your notebook or a voice note.</li>
-    <li>your banana only knows which days you journaled, never what's in your journal.</li>
-  </ul>
   
-  <p class="fine">the rest of skriblio, from the memory tree to the desk banana, is on the <a href="../">home page</a>.</p>
+</section>
+
+<section class="hm hm-split" aria-labelledby="restless-h">
+  <div class="hm-copy">
+    <h2 id="restless-h">restless.</h2>
+    <p class="hm-lead">it starts pacing and looking around, waiting for you.</p>
+  </div>
+  <figure class="pf"><span class="pf-bezel hm-sprite"><img class="px" src="../img/faces/post-worried.png" alt="skriblio, a banana, looking restless" width="256" height="256" loading="lazy" /></span></figure>
+</section>
+
+<section class="hm hm-split flip" aria-labelledby="rogue-h">
+  <div class="hm-copy">
+    <h2 id="rogue-h">rogue.</h2>
+    <p class="hm-lead">it runs about, bounces off the walls and stands on its head, right on your home screen.</p>
+  </div>
+  <figure class="pf"><span class="pf-bezel"><img src="../img/product/home-rogue.jpg?v=110" alt="the skriblio home screen after a while without journaling. the banana bounces about the screen and the 'journal' button is cracked." width="330" height="717" loading="lazy" decoding="async" /></span></figure>
+</section>
+
+<section class="hm hm-split" aria-labelledby="calm-h">
+  <div class="hm-copy">
+    <h2 id="calm-h">calm again.</h2>
+    <p class="hm-lead">journal anything, a few typed lines, a photo of your notebook or a voice note, and it calms straight down.</p>
+  </div>
+  <figure class="pf"><span class="pf-bezel"><img src="../img/product/home-hero.jpg?v=110" alt="this is the skriblio home screen. a banana with a mail bag stands in the middle. under it a line says 'glad you got some thoughts down today.' and the 'journal' button is at the bottom." width="330" height="717" loading="lazy" decoding="async" /></span></figure>
+</section>
+<section class="hm hm-center-block">
+  <div class="hm-copy hm-center">
+    <p class="hm-lead">you'll see it on your widget and on your computer too, so it's hard to miss.</p>
+    <p class="hm-lead">it isn't a streak and it isn't a punishment. your banana only knows which days you journaled, never what's in your journal.</p>
+  </div>
+  
+</section>
+
+<section class="hm hm-end hm-sm" aria-label="get skriblio">
+  <div class="hm-price">
+    <h3>two weeks free.</h3>
+    <p>then $49.99 a year or $9.99 a month. cancel any time in the app store or google play.</p>
+    <div class="badges"><a class="badge" href="https://apps.apple.com/app/id6807967868"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4.2zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg><span>app store</span></a><a class="badge" href="https://play.google.com/store/apps/details?id=com.steadylabs.skriblio.app"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.3-8.2c.6-.3.6-1.1 0-1.4L5.2 3.4C4.7 3.1 4 3.4 4 3.5z"/></svg><span>google play</span></a></div>
+  </div>
 </section>
 
 </main>
-<footer class="bottom">
+<footer class="bottom home-foot">
   <div class="wrap">
     <nav aria-label="footer">
+      <a href="../paper/">on paper</a>
+      <a href="../rogue/">rogue mode</a>
+      <a href="../desktop/">the desktop companion</a>
+      <a href="../support/">support</a>
       <a href="../privacy/">privacy</a>
       <a href="../terms/">terms</a>
-      <a href="../support/">support</a>
-      <a href="../delete-account/">delete account</a>
-      <a href="../download/">download</a>
-      <a href="../mac/">mac</a>
-      <a href="../windows/">windows</a>
-      <a href="mailto:info@skriblio.com">info@skriblio.com</a>
     </nav>
     <p>skriblio is made by steady labs (pty) ltd.</p>
-    <p>a journal with a banana in it.</p>
   </div>
 </footer>
 <script>

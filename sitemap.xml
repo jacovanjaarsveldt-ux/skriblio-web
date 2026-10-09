@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://skriblio.com/</loc></url>
+  <url><loc>https://skriblio.com/paper/</loc></url>
+  <url><loc>https://skriblio.com/rogue/</loc></url>
   <url><loc>https://skriblio.com/desktop/</loc></url>
   <url><loc>https://skriblio.com/mac/</loc></url>
   <url><loc>https://skriblio.com/windows/</loc></url>
