@@ -29,22 +29,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
 <link rel="preload" href="../../assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
-<link rel="stylesheet" href="../../site.css?v=steps" />
+<link rel="stylesheet" href="../../site.css?v=site2613" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EQ5FSL2TK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">skip to content</a>
 <header class="top">
   <div class="in">
     <a class="wordmark" href="../../"><img class="px" src="../../img/faces/ned-board.png" alt="" width="32" height="32" />skriblio</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
     <nav class="main" id="nav" aria-label="site">
+      <a href="../../">home</a>
       <a href="../../download/">download</a>
-      <a href="../../#paper">paper journal</a>
-      <a href="../../#tree">memory tree</a>
-      <a href="../../#school">journal school</a>
-      <a href="../../#rogue">rogue mode</a>
+      <a href="../../paper/">on paper</a>
+      <a href="../../rogue/">rogue mode</a>
+      <a href="../../desktop/">the desktop companion</a>
+      <a href="../../support/">support</a>
     </nav>
   </div>
 </header>
@@ -57,8 +58,9 @@
 <table><thead><tr><th>processor</th><th>what they receive</th><th>why</th><th>where</th><th>agreement</th></tr></thead><tbody>
 <tr><td>Supabase Inc</td><td>all account and journal data; photographs, voice notes and drawings in the <code>vault</code> bucket; request logs for 7 days, which include the words someone searched for</td><td>database, auth, storage, edge functions, cron</td><td>Frankfurt, Germany (one project, ref <code>qrpoauexqrfcgiyimyxd</code>)</td><td>Supabase DPA, accepted in the dashboard</td></tr>
 <tr><td>Anthropic PBC</td><td>photographs of journal pages, per request</td><td>handwriting transcription</td><td>United States</td><td>Anthropic commercial terms and DPA; no training on API inputs</td></tr>
-<tr><td>RevenueCat Inc</td><td>app user id (the account id), a device identifier, purchase receipts from Apple and Google</td><td>subscription status</td><td>United States</td><td>RevenueCat DPA</td></tr>
-<tr><td>Expo (650 Industries)</td><td>nothing at the moment: the app sends no push notifications and stores no push token (2026-09-30). When push is switched on: push token, notification payload (banana line only, never journal text)</td><td>push delivery to APNs and FCM</td><td>United States</td><td>Expo terms and DPA</td></tr>
+<tr><td>RevenueCat Inc</td><td>app user id (the account id), a device identifier, purchase receipts from Apple and Google</td><td>subscription status; on iPhone it also tells Meta when a trial starts or a plan is paid for, with Meta's anonymous install id</td><td>United States</td><td>RevenueCat DPA</td></tr>
+<tr><td>Meta Platforms Ireland Ltd</td><td>iPhone only: that the app was installed and opened, an anonymous install id, and from RevenueCat trial starts and payments with that id and the device identifier. No advertising identifier, no tracking permission asked, nothing from the journal</td><td>measuring skriblio's own Instagram ads</td><td>Ireland and United States</td><td>Meta Business Tools Terms and Data Processing Terms</td></tr>
+<tr><td>Expo (650 Industries)</td><td>nothing at the moment: the app sends no push notifications from a server and stores no push token (2026-09-30; reminders are scheduled on the phone, nothing goes to Expo). When push is switched on: push token, notification payload (banana line only, never journal text)</td><td>push delivery to APNs and FCM</td><td>United States</td><td>Expo terms and DPA</td></tr>
 <tr><td>Apple Inc</td><td>purchase; email (or private relay) when you use Sign in with Apple; push delivery once push is switched on (it isn't)</td><td>payments, sign in, notifications</td><td>worldwide</td><td>Apple developer agreement</td></tr>
 <tr><td>Google LLC</td><td>purchase; email and name when you use Google sign in; analytics with a random id (page views on skriblio.com, screen names in the app), from which Google Analytics works out an approximate location without keeping the IP address. advertising signals off. push delivery (FCM) once push is switched on (it isn't)</td><td>payments, sign in, product analytics, notifications on Android</td><td>worldwide</td><td>Google Play developer agreement, Firebase terms, Google sign-in terms, Google Ads Data Processing Terms</td></tr>
 <tr><td>PostHog Inc</td><td>user id, screen and event names with a few properties (which prompt, the day's rating, a voice note's length), device type, app version</td><td>product analytics</td><td>EU host <code>https://eu.i.posthog.com</code>, org <code>Skriblio</code>, project <code>skriblio</code> (id <code>268846</code>). the other steady labs org on that account was deleted 2026-09-08. Replay, autocapture and GeoIP off. 12 month retention</td><td>PostHog Cloud DPA</td></tr>
@@ -94,20 +96,17 @@
 </article>
 
 </main>
-<footer class="bottom">
+<footer class="bottom home-foot">
   <div class="wrap">
     <nav aria-label="footer">
+      <a href="../../paper/">on paper</a>
+      <a href="../../rogue/">rogue mode</a>
+      <a href="../../desktop/">the desktop companion</a>
+      <a href="../../support/">support</a>
       <a href="../../privacy/">privacy</a>
       <a href="../../terms/">terms</a>
-      <a href="../../support/">support</a>
-      <a href="../../delete-account/">delete account</a>
-      <a href="../../download/">download</a>
-      <a href="../../mac/">mac</a>
-      <a href="../../windows/">windows</a>
-      <a href="mailto:info@skriblio.com">info@skriblio.com</a>
     </nav>
     <p>skriblio is made by steady labs (pty) ltd.</p>
-    <p>a journal with a banana in it.</p>
   </div>
 </footer>
 <script>
