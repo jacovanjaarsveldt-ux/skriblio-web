@@ -6,7 +6,9 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.steadylabs.skriblio.app",
-      "sha256_cert_fingerprints": []
+      "sha256_cert_fingerprints": [
+        "A6:FE:3A:4D:88:8F:45:4D:B1:FD:52:A3:9A:DC:44:94:12:80:56:7B:22:85:1E:2A:E5:79:11:EC:FA:65:66:BD"
+      ]
     }
   }
 ]
