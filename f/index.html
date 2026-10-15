@@ -112,7 +112,8 @@
     // a phone goes straight to its own store's redeem page; the links above stay for the way back and for a computer
     var ua = navigator.userAgent || "";
     var to = /iPhone|iPad|iPod/i.test(ua) ? apple.href : /Android/i.test(ua) ? play.href : "";
-    if (to) setTimeout(function () { location.replace(to); }, 600);
+    // with a friend's token too (a friend invite that carries the free month) the page stays: the steps are how they join
+    if (to && !ok) setTimeout(function () { location.replace(to); }, 600);
   }
   // the store for this phone only: an iphone sees the app store, an android phone google play, a computer both with
   // their qr codes (Jaco 2026-10-05: "to which store? will it pick up which phone they have?")
