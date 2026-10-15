@@ -1,15 +1,15 @@
 {
-  "version": "0.1.7",
-  "notes": "connecting to your phone works again.",
-  "pub_date": "2026-10-13T13:47:20Z",
+  "version": "0.1.8",
+  "notes": "friends who journaled today now come by, and the back button in settings works.",
+  "pub_date": "2026-10-15T10:21:42Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWZ3azZoSDlsRFVseFVCOUpDeGU1RnhmbHFBVVVodVBYMTJYVStJcThpRUtING1nS3RJNzMwamttQlA2bSs2ejJwOWJKOUtpYStIOEZjaVlkSzErQ0E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxOTAyNzI4CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS43ClJ2NkdnQUNmRDc2UGhoZ1RLMXBHZGJGc1ZaVTFwTXVNWG1BTDdzcERKWHdQYWVTeC9DaEV4bDI5SnBkS3FjOEdPL3lGcTJ3U2sva2tKbkRaL3VmVkRBPT0K",
-      "url": "https://skriblio.com/desk/0.1.7/Skriblio_0.1.7_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWFtcUFRd2Q3R3FZMzRkUzBvSGZ6UW40blplcWRGeXVtdWUzdm1XTmh6WWRvdkdaUW93cGVCalNSbU9IZzhvOTNldGxDcmRNNmVlVC9HTHVVUzhkWVFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMDU5NjM2CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS44CjFqeVQ5VVQ5SnpocWxTQ1czMGUydkwzQi9IMmpuanNsLzZ0ZzNXSVJacURxYVNYaGhHWDVkZWZyKys2S1Nwc0FvVWlia0xzNVBhSDJ0U3cyTkRKMUJnPT0K",
+      "url": "https://skriblio.com/desk/0.1.8/Skriblio_0.1.8_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWZ3azZoSDlsRFVseFVCOUpDeGU1RnhmbHFBVVVodVBYMTJYVStJcThpRUtING1nS3RJNzMwamttQlA2bSs2ejJwOWJKOUtpYStIOEZjaVlkSzErQ0E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxOTAyNzI4CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS43ClJ2NkdnQUNmRDc2UGhoZ1RLMXBHZGJGc1ZaVTFwTXVNWG1BTDdzcERKWHdQYWVTeC9DaEV4bDI5SnBkS3FjOEdPL3lGcTJ3U2sva2tKbkRaL3VmVkRBPT0K",
-      "url": "https://skriblio.com/desk/0.1.7/Skriblio_0.1.7_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWFtcUFRd2Q3R3FZMzRkUzBvSGZ6UW40blplcWRGeXVtdWUzdm1XTmh6WWRvdkdaUW93cGVCalNSbU9IZzhvOTNldGxDcmRNNmVlVC9HTHVVUzhkWVFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMDU5NjM2CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS44CjFqeVQ5VVQ5SnpocWxTQ1czMGUydkwzQi9IMmpuanNsLzZ0ZzNXSVJacURxYVNYaGhHWDVkZWZyKys2S1Nwc0FvVWlia0xzNVBhSDJ0U3cyTkRKMUJnPT0K",
+      "url": "https://skriblio.com/desk/0.1.8/Skriblio_0.1.8_universal.app.tar.gz"
     }
   }
 }
