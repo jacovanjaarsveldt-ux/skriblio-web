@@ -1,15 +1,15 @@
 {
-  "version": "0.1.8",
-  "notes": "friends who journaled today now come by, and the back button in settings works.",
-  "pub_date": "2026-10-15T10:21:42Z",
+  "version": "0.1.9",
+  "notes": "the page always opens with a prompt to start from, and your screenshots have the banana in them again.",
+  "pub_date": "2026-10-21T11:25:32Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWFtcUFRd2Q3R3FZMzRkUzBvSGZ6UW40blplcWRGeXVtdWUzdm1XTmh6WWRvdkdaUW93cGVCalNSbU9IZzhvOTNldGxDcmRNNmVlVC9HTHVVUzhkWVFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMDU5NjM2CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS44CjFqeVQ5VVQ5SnpocWxTQ1czMGUydkwzQi9IMmpuanNsLzZ0ZzNXSVJacURxYVNYaGhHWDVkZWZyKys2S1Nwc0FvVWlia0xzNVBhSDJ0U3cyTkRKMUJnPT0K",
-      "url": "https://skriblio.com/desk/0.1.8/Skriblio_0.1.8_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVhQMXFYUktBZXkwR0VzUVZFYklDZmNhdXgzd2ZZd2hNUnFZVW5XT3BoOGJyNGFFM0c4Rm5FbEtUUkRuRk5wdW9hZ1JKM2dEVFFIeHo1NEVaeTcwYVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTgxODI0CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS45Cjc1Q0pLMFpZMFpzaUN4UXF0WlVRSUtvWC90ak8zclF0WGtmN0I1TlR3Y2d1U2RYOTBCMVRvVWtRK2pBWnBKRnpmcy9vVnJiL3hRRGxNYkw0QVFoekRnPT0K",
+      "url": "https://skriblio.com/desk/0.1.9/Skriblio_0.1.9_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWFtcUFRd2Q3R3FZMzRkUzBvSGZ6UW40blplcWRGeXVtdWUzdm1XTmh6WWRvdkdaUW93cGVCalNSbU9IZzhvOTNldGxDcmRNNmVlVC9HTHVVUzhkWVFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyMDU5NjM2CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS44CjFqeVQ5VVQ5SnpocWxTQ1czMGUydkwzQi9IMmpuanNsLzZ0ZzNXSVJacURxYVNYaGhHWDVkZWZyKys2S1Nwc0FvVWlia0xzNVBhSDJ0U3cyTkRKMUJnPT0K",
-      "url": "https://skriblio.com/desk/0.1.8/Skriblio_0.1.8_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVhQMXFYUktBZXkwR0VzUVZFYklDZmNhdXgzd2ZZd2hNUnFZVW5XT3BoOGJyNGFFM0c4Rm5FbEtUUkRuRk5wdW9hZ1JKM2dEVFFIeHo1NEVaeTcwYVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTgxODI0CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS45Cjc1Q0pLMFpZMFpzaUN4UXF0WlVRSUtvWC90ak8zclF0WGtmN0I1TlR3Y2d1U2RYOTBCMVRvVWtRK2pBWnBKRnpmcy9vVnJiL3hRRGxNYkw0QVFoekRnPT0K",
+      "url": "https://skriblio.com/desk/0.1.9/Skriblio_0.1.9_universal.app.tar.gz"
     }
   }
 }
