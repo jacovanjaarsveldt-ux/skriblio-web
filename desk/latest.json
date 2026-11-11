@@ -1,15 +1,19 @@
 {
-  "version": "0.1.9",
-  "notes": "the page always opens with a prompt to start from, and your screenshots have the banana in them again.",
-  "pub_date": "2026-10-21T11:25:32Z",
+  "version": "1.0.0",
+  "notes": "a side panel on the mac's right edge to journal in, and your banana jumps onto it.",
+  "pub_date": "2026-11-11T21:34:40Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVhQMXFYUktBZXkwR0VzUVZFYklDZmNhdXgzd2ZZd2hNUnFZVW5XT3BoOGJyNGFFM0c4Rm5FbEtUUkRuRk5wdW9hZ1JKM2dEVFFIeHo1NEVaeTcwYVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTgxODI0CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS45Cjc1Q0pLMFpZMFpzaUN4UXF0WlVRSUtvWC90ak8zclF0WGtmN0I1TlR3Y2d1U2RYOTBCMVRvVWtRK2pBWnBKRnpmcy9vVnJiL3hRRGxNYkw0QVFoekRnPT0K",
-      "url": "https://skriblio.com/desk/0.1.9/Skriblio_0.1.9_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWZNc0ZVckdDem5ZcHZ0SGFGSkdYeDlyYUZMTjhLU2I4cmYvS04vajVFakZWTmhhcEF3eEhGYTY0Y1RROHR1Z2xUbnQ3a3AwNUVPUkVJREVheWJQYXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDMyNTMzCWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjEuMC4wCk1oV2FDTC9vbUQvRldmNTNHeUE1SDZFUjhWay8wR3pBNkpsaGprWWxsb1Bnc2JuS2U5SXNqNWFrTDBWRklPb2g4L1JnTVZYSE1EQTFpUXdsOTEwSkJnPT0K",
+      "url": "https://skriblio.com/desk/1.0.0/Skriblio_1.0.0_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVhQMXFYUktBZXkwR0VzUVZFYklDZmNhdXgzd2ZZd2hNUnFZVW5XT3BoOGJyNGFFM0c4Rm5FbEtUUkRuRk5wdW9hZ1JKM2dEVFFIeHo1NEVaeTcwYVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTgxODI0CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjAuMS45Cjc1Q0pLMFpZMFpzaUN4UXF0WlVRSUtvWC90ak8zclF0WGtmN0I1TlR3Y2d1U2RYOTBCMVRvVWtRK2pBWnBKRnpmcy9vVnJiL3hRRGxNYkw0QVFoekRnPT0K",
-      "url": "https://skriblio.com/desk/0.1.9/Skriblio_0.1.9_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWZNc0ZVckdDem5ZcHZ0SGFGSkdYeDlyYUZMTjhLU2I4cmYvS04vajVFakZWTmhhcEF3eEhGYTY0Y1RROHR1Z2xUbnQ3a3AwNUVPUkVJREVheWJQYXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDMyNTMzCWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjEuMC4wCk1oV2FDTC9vbUQvRldmNTNHeUE1SDZFUjhWay8wR3pBNkpsaGprWWxsb1Bnc2JuS2U5SXNqNWFrTDBWRklPb2g4L1JnTVZYSE1EQTFpUXdsOTEwSkJnPT0K",
+      "url": "https://skriblio.com/desk/1.0.0/Skriblio_1.0.0_universal.app.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVZBMDRYbkZkM056S0dLN3VaYXZnSDNNbWhGaHNDZ1pJMHNYQ0JCQ1c5T0ZjOTQrUFExRXQ0cXZPUFRrWldNYVdZWFlqVS9IU3AzdGZCdEtDTm9xQlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDMyNjQ0CWZpbGU6U2tyaWJsaW9fMS4wLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMC4wCjltTW5PT3dZMEpyOEpyU1NqRVVvZjdFSGJmSUJmNkkrT0MrR1pJSVhNVUFwa0NvTDBTQVZ0ZnA2S2c4RWl6aXNiN2g5WVV4elN6enVSN1Q3ZUtzU0J3PT0K",
+      "url": "https://skriblio.com/desk/1.0.0/Skriblio_1.0.0_x64-setup.exe"
     }
   }
 }
