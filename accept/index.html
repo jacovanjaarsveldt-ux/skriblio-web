@@ -55,6 +55,13 @@
     <p class="soft">nothing is stored until you tap the button. then only your number, the time, and the exact words above.</p>
   </section>
 
+  <!-- the circle is paused (lane 09, A8): the function no longer says who sent an invite, and takes no number until
+       the whatsapp number is live -->
+  <section id="paused" hidden>
+    <h1>this invite is paused.</h1>
+    <p class="soft">your friend can tell you when it's back.</p>
+  </section>
+
   <section id="done" hidden>
     <h1 id="done-title"></h1>
     <p id="done-body"></p>
@@ -67,13 +74,15 @@
   const FN = document.currentScript.dataset.fn || "https://qrpoauexqrfcgiyimyxd.supabase.co/functions/v1/accept-invite";
   const token = new URLSearchParams(location.search).get("token") || location.pathname.split("/").filter(Boolean).pop() || "";
   const $ = (id) => document.getElementById(id);
-  const show = (id) => { for (const s of ["loading", "invalid", "ask", "done"]) $(s).hidden = s !== id; };
+  const show = (id) => { for (const s of ["loading", "invalid", "paused", "ask", "done"]) $(s).hidden = s !== id; };
 
   async function load() {
     if (!token) return show("invalid");
     const r = await fetch(`${FN}?token=${encodeURIComponent(token)}`, { headers: { accept: "application/json" } }).catch(() => null);
     if (!r || !r.ok) return show("invalid");
     const v = await r.json();
+    // no inviter in the answer: the circle is paused, and the number field stays hidden
+    if (!v.inviter) return show("paused");
     if (v.status === "accepted") return finished(v.friendName, v.banana);
     $("hello").textContent = `hi ${v.friendName}. i am ${v.banana}.`;
     $("intro").textContent = `i'm a banana, and ${v.inviter} keeps a journal with me on skriblio. if they stay away too long, i tell you that and only that, and never a word of what they wrote.`;
@@ -100,6 +109,7 @@
       body: JSON.stringify({ token, phone: $("phone").value, wording: f.dataset.wording }),
     }).catch(() => null);
     if (r && r.ok) return finished(f.dataset.friend, f.dataset.banana);
+    if (r && r.status === 409) return show("paused");
     err.textContent = r && r.status === 400 ? "that number doesn't look right. include the country code." : "something went wrong, so try again.";
     err.hidden = false; go.disabled = false;
   });
