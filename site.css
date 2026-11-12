@@ -462,13 +462,17 @@ body.home .wrap { max-width: 1040px; }
 .pf { margin: 0; width: 100%; max-width: 276px; }
 .pf-bezel { display: block; padding: 7px; border-radius: 42px; background: #1b1710; box-shadow: 0 30px 60px -18px rgba(110, 74, 31, 0.38), 0 6px 16px rgba(110, 74, 31, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.08); }
 .pf img { width: 100%; height: auto; border-radius: 35px; background: var(--paper); }
+/* two or three phones side by side: wrap on a narrow screen, always centred */
+.pf-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px 32px; width: 100%; margin-top: 36px; }
+.pf-row .pf { width: 240px; max-width: 100%; }
 
 .hm-list { list-style: none; margin: 30px 0 0; padding: 0; text-align: left; border-top: 1px solid var(--glass-border); }
 .hm-list li { display: grid; gap: 4px; padding: 18px 0; border-bottom: 1px solid var(--glass-border); }
 .hm-list b { font-family: var(--serif); font-weight: 400; font-size: 28px; line-height: 1.1; }
 .hm-list span { font-size: 16px; line-height: 1.55; color: var(--ink2); }
 
-.hm-cast { list-style: none; margin: 0; padding: 22px 16px; display: grid; grid-template-columns: repeat(4, 64px); gap: 14px 20px; justify-content: center; width: 100%; max-width: 420px; border-radius: 28px; background: var(--glass); border: 1px solid var(--glass-border); }
+.hm-cast { list-style: none; margin: 0; padding: 22px 16px; display: flex; flex-wrap: wrap; gap: 14px 14px; justify-content: center; width: 100%; max-width: 356px; border-radius: 28px; background: var(--glass); border: 1px solid var(--glass-border); }
+.hm-cast li { width: 64px; height: 64px; }
 .hm-cast img { width: 64px; height: 64px; }
 body.home main { overflow-x: clip; }
 .hm-rogue { margin-top: 36px; }
@@ -565,3 +569,18 @@ body.home main { overflow-x: clip; }
 .deskfilm { margin: 0; display: grid; gap: 14px; width: 100%; max-width: 820px; margin-inline: auto; }
 .deskfilm .dfp-frame { box-shadow: 0 24px 60px rgba(110, 74, 31, .16), 0 2px 8px rgba(110, 74, 31, .08); }
 .deskfilm figcaption { font-family: var(--mono); font-size: 12px; line-height: 1.7; color: var(--soft); text-align: center; }
+
+/* 2026-11-12: prompt cards drawn like the app's, the what's new labels, a plans section that may have no picture */
+.pc-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; width: 100%; max-width: 44rem; }
+.pc { display: flex; flex-direction: column; gap: 14px; text-align: left; padding: 20px 22px; border-radius: 26px; background: var(--glass); border: 1px solid var(--glass-border); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 18px 40px rgba(110, 74, 31, 0.10); }
+.pc-top { display: flex; justify-content: space-between; gap: 12px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--soft); }
+.pc-text { margin: 0; font-family: var(--serif); font-size: 24px; line-height: 1.25; color: var(--ink); }
+.pc-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: auto; }
+.pc-row span { padding: 10px 4px; text-align: center; border-radius: 14px; background: rgba(255, 255, 255, 0.55); border: 1px solid var(--glass-border); font-family: var(--mono); font-size: 12px; color: var(--ink2); }
+.pc-foot { margin: auto 0 0; font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--soft); }
+.hm-copy.wide > .hm-label { text-align: center; margin-bottom: 8px; }
+#get.hm-sm .badges { justify-content: center; }
+@media (min-width: 720px) {
+  .pc-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+.hm-label.hm-sub { text-align: left; margin: 18px 0 4px; }

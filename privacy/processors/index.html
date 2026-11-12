@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
 <link rel="preload" href="../../assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
-<link rel="stylesheet" href="../../site.css?v=site2616" />
+<link rel="stylesheet" href="../../site.css?v=site2618" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EQ5FSL2TK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 </head>
@@ -42,7 +42,8 @@
     <nav class="main" id="nav" aria-label="site">
       <a href="../../">home</a>
       <a href="../../download/">download</a>
-      <a href="../../desktop/">the desktop companion</a>
+      <a href="../../desktop/">desktop companion</a>
+      <a href="../../whats-new/">what's new</a>
       <a href="../../support/">support</a>
     </nav>
   </div>
@@ -54,14 +55,14 @@
 <p>POPIA section 21 (operators) and GDPR article 28 and 30 both want this table. Kept current by whoever adds a service. Published in short form at <a href="https://skriblio.com/privacy/processors">skriblio.com/privacy/processors</a>.</p>
 <h2>Processors (operators)</h2>
 <table><thead><tr><th>processor</th><th>what they receive</th><th>why</th><th>where</th><th>agreement</th></tr></thead><tbody>
-<tr><td>Supabase Inc</td><td>all account and journal data; photographs, voice notes and drawings in the <code>vault</code> bucket; request logs for 7 days, which include the words someone searched for</td><td>database, auth, storage, edge functions, cron</td><td>Frankfurt, Germany (one project, ref <code>qrpoauexqrfcgiyimyxd</code>)</td><td>Supabase DPA, accepted in the dashboard</td></tr>
-<tr><td>Anthropic PBC</td><td>photographs of journal pages, per request</td><td>handwriting transcription</td><td>United States</td><td>Anthropic commercial terms and DPA; no training on API inputs</td></tr>
+<tr><td>Supabase Inc</td><td>all account and journal data; photographs, voice notes and drawings in private file storage; the place name and rounded position of an entry; feedback you send; the list of entries a connected computer leaves out; request logs for 7 days, which include the words someone searched for</td><td>database, auth, storage, edge functions, cron</td><td>Frankfurt, Germany (one project, ref <code>qrpoauexqrfcgiyimyxd</code>)</td><td>Supabase DPA, accepted in the dashboard</td></tr>
+<tr><td>Anthropic PBC</td><td>photographs of journal pages, per request, only if the person said yes to "turn handwriting into text"</td><td>turning handwriting into text</td><td>United States</td><td>Anthropic commercial terms and DPA; no training on API inputs</td></tr>
 <tr><td>RevenueCat Inc</td><td>app user id (the account id), a device identifier, purchase receipts from Apple and Google</td><td>subscription status; on iPhone and Android it also tells Meta when a trial starts or a plan is paid for, with Meta's anonymous install id</td><td>United States</td><td>RevenueCat DPA</td></tr>
 <tr><td>Meta Platforms Ireland Ltd</td><td>iPhone and Android: that the app was installed and opened, an anonymous install id, and from RevenueCat trial starts and payments with that id. No advertising identifier (on Android the app does not hold the advertising id permission), no tracking permission asked, nothing from the journal</td><td>measuring skriblio's own Instagram ads</td><td>Ireland and United States</td><td>Meta Business Tools Terms and Data Processing Terms</td></tr>
 <tr><td>Expo (650 Industries)</td><td>nothing at the moment: the app sends no push notifications from a server and stores no push token (2026-09-30; reminders are scheduled on the phone, nothing goes to Expo). When push is switched on: push token, notification payload (banana line only, never journal text)</td><td>push delivery to APNs and FCM</td><td>United States</td><td>Expo terms and DPA</td></tr>
-<tr><td>Apple Inc</td><td>purchase; email (or private relay) when you use Sign in with Apple; push delivery once push is switched on (it isn't)</td><td>payments, sign in, notifications</td><td>worldwide</td><td>Apple developer agreement</td></tr>
-<tr><td>Google LLC</td><td>purchase; email and name when you use Google sign in; analytics with a random id (page views on skriblio.com, screen and event names in the app), from which Google Analytics works out an approximate location without keeping the IP address. advertising signals off. Android only: ML Kit text recognition (bundled in the app) reads scanned pages on the phone; pictures and words are not sent to Google, but ML Kit sends usage metrics (device, app, latency, sizes, error codes) with no switch to turn that off. Android's own on-device speech recognition types up voice notes with no audio leaving the phone push delivery (FCM) once push is switched on (it isn't)</td><td>payments, sign in, product analytics, reading scanned pages and typing up voice notes on Android, notifications on Android</td><td>worldwide</td><td>Google Play developer agreement, Firebase terms, Google sign-in terms, Google Ads Data Processing Terms</td></tr>
-<tr><td>PostHog Inc</td><td>user id, screen and event names with a few properties (which prompt, the day's rating, a voice note's length), device type, app version</td><td>product analytics</td><td>EU host <code>https://eu.i.posthog.com</code>, org <code>Skriblio</code>, project <code>skriblio</code> (id <code>268846</code>). the other steady labs org on that account was deleted 2026-09-08. Replay, autocapture and GeoIP off. 12 month retention</td><td>PostHog Cloud DPA</td></tr>
+<tr><td>Apple Inc</td><td>purchase; email (or private relay) when you use Sign in with Apple; on an iPhone, the exact position behind "add location", sent from the phone to Apple's place lookup when the person taps it, never through us, to get a place name; push delivery once push is switched on (it isn't)</td><td>payments, sign in, place names, notifications</td><td>worldwide</td><td>Apple developer agreement</td></tr>
+<tr><td>Google LLC</td><td>purchase; email and name when you use Google sign in; analytics with a random id (page views on skriblio.com, screen and event names in the app), from which Google Analytics works out an approximate location without keeping the IP address. advertising signals off. Android only: ML Kit text recognition (bundled in the app) reads scanned pages on the phone; pictures and words are not sent to Google, but ML Kit sends usage metrics (device, app, latency, sizes, error codes) with no switch to turn that off. Android's own on-device speech recognition types up voice notes with no audio leaving the phone. On Android, the exact position behind "add location", sent from the phone to Google's place lookup when the person taps it, never through us, to get a place name. Push delivery (FCM) once push is switched on (it isn't)</td><td>payments, sign in, product analytics, reading scanned pages, typing up voice notes and place names on Android, notifications on Android</td><td>worldwide</td><td>Google Play developer agreement, Firebase terms, Google sign-in terms, Google Ads Data Processing Terms</td></tr>
+<tr><td>PostHog Inc</td><td>user id, screen and event names with a few properties (for example which prompt was used, and the store account's country on the plans page; never the day's rating, an entry's length or its kind), device type, app version</td><td>product analytics</td><td>EU host <code>https://eu.i.posthog.com</code>, org <code>Skriblio</code>, project <code>skriblio</code> (id <code>268846</code>). the other steady labs org on that account was deleted 2026-09-08. Replay, autocapture and GeoIP off. 12 month retention</td><td>PostHog Cloud DPA</td></tr>
 <tr><td>Functional Software Inc (Sentry)</td><td>crash stack traces, device model, OS, app version</td><td>crash reporting</td><td>United States, org <code>steady-labs-holdings</code>, project <code>skriblio-mobile</code>. IPs scrubbed. the other steady labs mobile project was deleted 2026-09-08. Code never sends journal text</td><td>Sentry DPA</td></tr>
 <tr><td>GitHub Inc</td><td>nothing personal; static pages only</td><td>hosts skriblio.com pages</td><td>United States</td><td>none needed, no personal data</td></tr>
 <tr><td>Resend Inc</td><td>email address, one time code</td><td>sign in mail from our domain</td><td>Ireland (<code>eu-west-1</code>)</td><td>Resend DPA</td></tr>
@@ -72,7 +73,7 @@
 <h2>Retention schedule</h2>
 <table><thead><tr><th>data</th><th>kept</th><th>then</th></tr></thead><tbody>
 <tr><td>account (email, ids)</td><td>life of the account</td><td>deleted on account deletion, same request</td></tr>
-<tr><td>journal entries, titles, ratings</td><td>life of the account</td><td>soft deleted entries purged after 30 days; all purged on account deletion</td></tr>
+<tr><td>journal entries, titles, ratings (a letter to yourself is an entry, shown from its opening day)</td><td>life of the account</td><td>soft deleted entries purged after 30 days; all purged on account deletion</td></tr>
 <tr><td>photographs (originals and derived)</td><td>life of the entry</td><td>removed from storage on entry purge or account deletion (storage first, then rows)</td></tr>
 <tr><td>transcripts</td><td>life of the photograph</td><td>deleted with the photograph, or alone on request</td></tr>
 <tr><td>voice notes and their typed words</td><td>life of the entry</td><td>removed from storage on entry purge or account deletion; typing up happens on the phone (iPhone, and Android 13 and later with the language installed), no processor</td></tr>
@@ -80,6 +81,9 @@
 <tr><td>copy of each recording made on this phone (<code>voice-local/</code>, for typing up offline)</td><td>on the phone only</td><td>removed with the voice note, on entry purge, and on sign out or account deletion (<code>src/features/voice/localCopy.ts</code>)</td></tr>
 <tr><td>kind of each day's save (typed, photo, voice, doodle)</td><td>on the phone only</td><td>cleared on sign out; never sent to the server or to analytics</td></tr>
 <tr><td>banana state, care log</td><td>life of the account</td><td>deleted on account deletion</td></tr>
+<tr><td>place on an entry (name and position rounded to about a kilometre)</td><td>until the person removes it</td><td>removed with the entry when it is purged, and on account deletion</td></tr>
+<tr><td>feedback sent in the app (words, optional line, app version, iPhone or Android)</td><td>life of the account</td><td>deleted on account deletion; no earlier fixed date</td></tr>
+<tr><td>list of entries a connected computer leaves out (entry ids, the sending phone's name, the time sent)</td><td>until the entry is un-hidden, purged, or the account deleted</td><td>deleted with the account</td></tr>
 <tr><td>silence streaks</td><td>rolling</td><td>rows older than 12 months purged by cron</td></tr>
 <tr><td>push token</td><td>not stored while push is off</td><td>replaced on each sign in once push is on</td></tr>
 <tr><td>analytics events</td><td>12 months</td><td>PostHog retention setting</td></tr>
@@ -100,7 +104,8 @@
 <footer class="bottom home-foot">
   <div class="wrap">
     <nav aria-label="footer">
-      <a href="../../desktop/">the desktop companion</a>
+      <a href="../../desktop/">desktop companion</a>
+      <a href="../../whats-new/">what's new</a>
       <a href="../../support/">support</a>
       <a href="../../privacy/">privacy</a>
       <a href="../../terms/">terms</a>

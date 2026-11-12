@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
 <link rel="preload" href="../assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
-<link rel="stylesheet" href="../site.css?v=site2616" />
+<link rel="stylesheet" href="../site.css?v=site2618" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EQ5FSL2TK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 </head>
@@ -42,7 +42,8 @@
     <nav class="main" id="nav" aria-label="site">
       <a href="../">home</a>
       <a href="../download/">download</a>
-      <a href="../desktop/" aria-current="page">the desktop companion</a>
+      <a href="../desktop/" aria-current="page">desktop companion</a>
+      <a href="../whats-new/">what's new</a>
       <a href="../support/">support</a>
     </nav>
   </div>
@@ -120,7 +121,7 @@
       <span class="dfp-time"><span class="dfp-cur">0:00</span> / <span class="dfp-dur">0:56</span></span>
       <button type="button" class="dfp-mute" aria-label="mute"><span class="i-snd-on"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg></span><span class="i-snd-off"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 9l5 6M21 9l-5 6"/></svg></span></button>
       <button type="button" class="dfp-cc" aria-label="captions" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10.5 10.2a2 2 0 1 0 0 3.6M16.5 10.2a2 2 0 1 0 0 3.6"/></svg></button>
-      <button type="button" class="dfp-fs" aria-label="full screen" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      <button type="button" class="dfp-fs" aria-label="full screen" data-off="full screen" data-on="leave full screen" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
     </div>
   </div>
     <figcaption>a minute on what the desktop companion does.</figcaption>
@@ -195,7 +196,7 @@
       var changed = function () {
         var on = inFs();
         fs.setAttribute("aria-pressed", String(on));
-        fs.setAttribute("aria-label", on ? "leave full screen" : "full screen");
+        fs.setAttribute("aria-label", on ? fs.dataset.on : fs.dataset.off);
         root.classList.toggle("is-full", on);
       };
       document.addEventListener("fullscreenchange", changed); document.addEventListener("webkitfullscreenchange", changed);
@@ -217,6 +218,7 @@
       <li><span>one button opens the panel as a window in the middle of the screen for longer writing, and puts it back at the edge.</span></li>
       <li><span>'not now' sends your banana off until tomorrow morning, in one click.</span></li>
     </ul>
+    <p class="fine">every release is listed on the <a href="../whats-new/">what's new</a> page.</p>
   </div>
 </section>
 
@@ -267,7 +269,8 @@
 <footer class="bottom home-foot">
   <div class="wrap">
     <nav aria-label="footer">
-      <a href="../desktop/">the desktop companion</a>
+      <a href="../desktop/">desktop companion</a>
+      <a href="../whats-new/">what's new</a>
       <a href="../support/">support</a>
       <a href="../privacy/">privacy</a>
       <a href="../terms/">terms</a>
