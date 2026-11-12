@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
 <link rel="preload" href="../assets/DepartureMono-Regular.otf" as="font" type="font/otf" crossorigin />
-<link rel="stylesheet" href="../site.css?v=site2615" />
+<link rel="stylesheet" href="../site.css?v=site2616" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EQ5FSL2TK"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6EQ5FSL2TK',{allow_google_signals:false,allow_ad_personalization_signals:false,anonymize_ip:true});</script>
 </head>
@@ -67,19 +67,144 @@
 
 <section class="hm hm-sm" aria-label="the desktop companion in a minute">
   <figure class="deskfilm">
-    <video controls playsinline preload="metadata" poster="../img/desk/companion-poster.jpg" width="1600" height="1000" aria-label="the desktop companion in a minute, with a voice">
-      <source src="../img/desk/companion-small.mp4" type="video/mp4" media="(max-width: 700px)" />
-      <source src="../img/desk/companion.mp4" type="video/mp4" />
-      <track kind="captions" srclang="en" label="english" src="../img/desk/companion.vtt" />
-    </video>
+    <style>
+.dfp { --dfp-ink: #14110B; --dfp-soft: #6B5E47; --dfp-cream: #F6EBD2; --dfp-bar: rgba(255, 250, 238, 0.7); --dfp-line: rgba(110, 74, 31, 0.18); --dfp-ring: #D9A400; --dfp-stage: #efdcb4; display: flex; flex-direction: column; gap: 10px; width: 100%; color: var(--dfp-ink); }
+.dfp [hidden] { display: none !important; }
+.dfp-frame { position: relative; aspect-ratio: 16 / 10; border-radius: 22px; overflow: hidden; background: var(--dfp-stage); border: 1px solid var(--dfp-line); cursor: pointer; }
+.dfp video { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--dfp-stage); }
+.dfp-big { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; padding: 0; border: 0; border-radius: 50%; background: var(--dfp-ink); color: var(--dfp-cream); display: grid; place-items: center; cursor: pointer; opacity: 0.92; }
+.dfp-big svg { width: 28px; height: 28px; margin-left: 3px; }
+.dfp.is-playing .dfp-big { display: none; }
+.dfp-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; padding: 2px 8px; border-radius: 22px; background: var(--dfp-bar); border: 1px solid var(--dfp-line); }
+.dfp-bar button { appearance: none; -webkit-appearance: none; border: 0; background: transparent; color: inherit; width: 44px; height: 44px; padding: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; }
+.dfp-bar button[aria-pressed="true"] { background: var(--dfp-ink); color: var(--dfp-cream); }
+.dfp-bar button svg { display: block; width: 22px; height: 22px; }
+.dfp-bar button span { display: grid; place-items: center; }
+.dfp .i-pause, .dfp .i-snd-off { display: none !important; }
+.dfp.is-playing .i-pause, .dfp.is-muted .i-snd-off { display: grid !important; }
+.dfp.is-playing .i-play, .dfp.is-muted .i-snd-on { display: none !important; }
+.dfp-seek { flex: 1 1 140px; min-width: 0; height: 44px; margin: 0; padding: 0; appearance: none; -webkit-appearance: none; background: transparent; cursor: pointer; --p: 0%; }
+.dfp-seek::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--dfp-ink) var(--p), var(--dfp-line) var(--p)); }
+.dfp-seek::-moz-range-track { height: 4px; border-radius: 2px; background: var(--dfp-line); }
+.dfp-seek::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--dfp-ink); }
+.dfp-seek::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; margin-top: -6px; border: 0; border-radius: 50%; background: var(--dfp-ink); }
+.dfp-seek::-moz-range-thumb { width: 16px; height: 16px; border: 0; border-radius: 50%; background: var(--dfp-ink); }
+.dfp-time { font-family: var(--mono, ui-monospace, "SF Mono", Menlo, monospace); font-size: 12px; font-variant-numeric: tabular-nums; color: var(--dfp-soft); white-space: nowrap; padding: 0 4px; }
+.dfp button:focus-visible, .dfp-seek:focus-visible, .dfp-frame:focus-visible { outline: 3px solid var(--dfp-ring); outline-offset: 3px; }
+@media (max-width: 520px) {
+  .dfp-seek { order: -1; flex: 1 1 100%; }
+  .dfp-time { flex: 1; }
+}
+
+.dfp:fullscreen { background: #000; gap: 0; height: 100%; --dfp-ink: #F6EBD2; --dfp-cream: #14110B; --dfp-soft: #cdbf9f; --dfp-bar: #14110B; --dfp-line: rgba(246, 235, 210, 0.25); --dfp-stage: #000; }
+.dfp:fullscreen .dfp-frame { aspect-ratio: auto; flex: 1; min-height: 0; border-radius: 0; border: 0; }
+.dfp:fullscreen .dfp-bar { border-radius: 0; border: 0; }
+
+.dfp:-webkit-full-screen { background: #000; gap: 0; height: 100%; --dfp-ink: #F6EBD2; --dfp-cream: #14110B; --dfp-soft: #cdbf9f; --dfp-bar: #14110B; --dfp-line: rgba(246, 235, 210, 0.25); --dfp-stage: #000; }
+.dfp:-webkit-full-screen .dfp-frame { aspect-ratio: auto; flex: 1; min-height: 0; border-radius: 0; border: 0; }
+.dfp:-webkit-full-screen .dfp-bar { border-radius: 0; border: 0; }
+@media (prefers-reduced-motion: reduce) { .dfp, .dfp * { transition: none !important; animation: none !important; } }
+</style>
+    <div class="dfp" data-dfp data-vtt-narrow="../img/desk/companion-small.vtt" data-narrow="(max-width: 700px)" role="group" aria-label="the desktop companion in a minute, with a voice">
+    <div class="dfp-frame" tabindex="0">
+      <video playsinline preload="metadata" poster="../img/desk/companion-poster.jpg" width="1600" height="1000">
+        <source src="../img/desk/companion-small.mp4" type="video/mp4" media="(max-width: 700px)" />
+        <source src="../img/desk/companion.mp4" type="video/mp4" />
+        <track kind="captions" srclang="en" label="english" src="../img/desk/companion.vtt" />
+      </video>
+      <button type="button" class="dfp-big" aria-label="play the film"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></button>
+    </div>
+    <div class="dfp-bar" role="group" aria-label="film controls">
+      <button type="button" class="dfp-play" aria-label="play"><span class="i-play"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span><span class="i-pause"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></span></button>
+      <input type="range" class="dfp-seek" min="0" max="1000" step="1" value="0" aria-label="position in the film" />
+      <span class="dfp-time"><span class="dfp-cur">0:00</span> / <span class="dfp-dur">0:56</span></span>
+      <button type="button" class="dfp-mute" aria-label="mute"><span class="i-snd-on"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg></span><span class="i-snd-off"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 9l5 6M21 9l-5 6"/></svg></span></button>
+      <button type="button" class="dfp-cc" aria-label="captions" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10.5 10.2a2 2 0 1 0 0 3.6M16.5 10.2a2 2 0 1 0 0 3.6"/></svg></button>
+      <button type="button" class="dfp-fs" aria-label="full screen" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+  </div>
     <figcaption>a minute on what the desktop companion does.</figcaption>
   </figure>
-  <script>
-    (function () {
-      var v = document.querySelector(".deskfilm video"), t = v && v.querySelector("track");
-      if (t && window.matchMedia && window.matchMedia("(max-width: 700px)").matches) t.src = "../img/desk/companion-small.vtt";
-    })();
-  </script>
+  <script>(function () {
+  function fmt(s) { s = Math.max(0, Math.floor(s || 0)); var r = s % 60; return Math.floor(s / 60) + ":" + (r < 10 ? "0" : "") + r; }
+  function init(root) {
+    var v = root.querySelector("video"), frame = root.querySelector(".dfp-frame"), big = root.querySelector(".dfp-big");
+    var play = root.querySelector(".dfp-play"), seek = root.querySelector(".dfp-seek"), cur = root.querySelector(".dfp-cur"), dur = root.querySelector(".dfp-dur");
+    var mute = root.querySelector(".dfp-mute"), cc = root.querySelector(".dfp-cc"), fs = root.querySelector(".dfp-fs");
+    var dragging = false, started = false, captionsOn = false;
+    var tr = v.querySelector("track"), nv = root.getAttribute("data-vtt-narrow"), nq = root.getAttribute("data-narrow");
+    if (tr && nv && nq && window.matchMedia && window.matchMedia(nq).matches) tr.src = nv;
+    function modes(m) { for (var i = 0; i < v.textTracks.length; i++) v.textTracks[i].mode = m; }
+    modes("disabled");
+    if (!v.querySelector("track")) cc.hidden = true;
+    function toggle() {
+      if (v.paused || v.ended) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause();
+    }
+    function progress() {
+      seek.style.setProperty("--p", seek.value / 10 + "%");
+      var d = v.duration;
+      seek.setAttribute("aria-valuetext", fmt(v.currentTime) + (isFinite(d) ? " of " + fmt(d) : ""));
+    }
+    function update() {
+      var d = v.duration;
+      if (isFinite(d) && d > 0) { dur.textContent = fmt(d); if (!dragging) seek.value = Math.round((v.currentTime / d) * 1000); }
+      cur.textContent = fmt(v.currentTime);
+      progress();
+    }
+    function state() {
+      var on = !v.paused && !v.ended;
+      if (on) started = true;
+      root.classList.toggle("is-playing", on);
+      play.setAttribute("aria-label", on ? "pause" : "play");
+      big.setAttribute("aria-label", started ? "play" : "play the film");
+    }
+    v.addEventListener("play", state); v.addEventListener("pause", state); v.addEventListener("ended", state);
+    v.addEventListener("timeupdate", update); v.addEventListener("loadedmetadata", update); v.addEventListener("durationchange", update);
+    v.addEventListener("click", toggle); big.addEventListener("click", toggle); play.addEventListener("click", toggle);
+    frame.addEventListener("keydown", function (e) {
+      if ((e.key === " " || e.key === "Spacebar") && e.target === frame) { e.preventDefault(); toggle(); }
+    });
+    seek.addEventListener("pointerdown", function () { dragging = true; });
+    seek.addEventListener("pointerup", function () { dragging = false; });
+    seek.addEventListener("pointercancel", function () { dragging = false; });
+    seek.addEventListener("input", function () {
+      if (isFinite(v.duration)) v.currentTime = (seek.value / 1000) * v.duration;
+      cur.textContent = fmt(v.currentTime);
+      progress();
+    });
+    mute.addEventListener("click", function () {
+      v.muted = !v.muted;
+      root.classList.toggle("is-muted", v.muted);
+      mute.setAttribute("aria-label", v.muted ? "unmute" : "mute");
+    });
+    cc.addEventListener("click", function () {
+      captionsOn = !captionsOn;
+      modes(captionsOn ? "showing" : "disabled");
+      cc.setAttribute("aria-pressed", String(captionsOn));
+      root.classList.toggle("cc-on", captionsOn);
+    });
+    if (fs) {
+      var req = root.requestFullscreen || root.webkitRequestFullscreen;
+      var inFs = function () { return (document.fullscreenElement || document.webkitFullscreenElement) === root; };
+      if (!req && !v.webkitEnterFullscreen) fs.hidden = true;
+      fs.addEventListener("click", function () {
+        if (inFs()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); }
+        else if (req) { req.call(root); }
+        else if (v.webkitEnterFullscreen) { v.webkitEnterFullscreen(); }
+      });
+      var changed = function () {
+        var on = inFs();
+        fs.setAttribute("aria-pressed", String(on));
+        fs.setAttribute("aria-label", on ? "leave full screen" : "full screen");
+        root.classList.toggle("is-full", on);
+      };
+      document.addEventListener("fullscreenchange", changed); document.addEventListener("webkitfullscreenchange", changed);
+    }
+    state(); update();
+  }
+  var roots = document.querySelectorAll("[data-dfp]");
+  for (var i = 0; i < roots.length; i++) init(roots[i]);
+})();</script>
 </section>
 
 

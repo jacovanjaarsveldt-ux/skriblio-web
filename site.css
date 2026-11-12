@@ -563,5 +563,5 @@ body.home main { overflow-x: clip; }
 .fp-sees .fine { margin-top: 10px; }
 /* the desktop companion film: the video's own 16:10 box is held by the aspect ratio, so the page does not jump while it loads */
 .deskfilm { margin: 0; display: grid; gap: 14px; width: 100%; max-width: 820px; margin-inline: auto; }
-.deskfilm video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; border-radius: var(--radius); background: #efdcb4; border: 1px solid var(--glass-border); box-shadow: 0 24px 60px rgba(110, 74, 31, .16), 0 2px 8px rgba(110, 74, 31, .08); }
+.deskfilm .dfp-frame { box-shadow: 0 24px 60px rgba(110, 74, 31, .16), 0 2px 8px rgba(110, 74, 31, .08); }
 .deskfilm figcaption { font-family: var(--mono); font-size: 12px; line-height: 1.7; color: var(--soft); text-align: center; }
