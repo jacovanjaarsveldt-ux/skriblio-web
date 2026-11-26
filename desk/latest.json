@@ -1,19 +1,19 @@
 {
-  "version": "1.1.1",
-  "notes": "",
-  "pub_date": "2026-11-18T22:26:19Z",
+  "version": "1.1.2",
+  "notes": "every banana walks at an even pace now, and there's a box in settings to send the team feedback.",
+  "pub_date": "2026-11-26T04:22:53Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVhkVGtwL0dFUUxSZlBXS2kzUzZRck9ubkhjK05HbmRweSszb3l2VXJSeVpXNUFoWit5NUx3NUtyTmE4ckhLVkt0U3NONDhjRHZwMWQ0UDFDM09TT0FZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDQwNjA1CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjEuMS4xCnhWTjVPTGpWN3FnS2tCUWV2dmJTQUFwc0NSTHhVeUZpWVVMOXJwemprcHBoTlpKWWxmUkQvYndPSmladnh1cFNJL1prc21JUmtWTTBLK1IxcDY0SEJBPT0K",
-      "url": "https://skriblio.com/desk/1.1.1/Skriblio_1.1.1_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVQ5cGE4cEJ2MTVHWno5Q1pjZ2dsb3dUdzlQUVY4d251WHMwVWlOajUzY0N5cmgrQXJjckZVdUtPTVFoZzVvV1ZWOWVpa25SU25lb0VaVnlkZDhwelF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjY1ODgxCWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjEuMS4yCmNBQ2M4TXlMV3d3UjVBN3dxU2xSeDNsZWFrbWtyNDBQU2lJVlJPWGtmamVyVTNEU0dnRy9GTWhMTE1DZkpTVER0MU1lU29jL3lZU25XMXZKemlBekF3PT0K",
+      "url": "https://skriblio.com/desk/1.1.2/Skriblio_1.1.2_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVhkVGtwL0dFUUxSZlBXS2kzUzZRck9ubkhjK05HbmRweSszb3l2VXJSeVpXNUFoWit5NUx3NUtyTmE4ckhLVkt0U3NONDhjRHZwMWQ0UDFDM09TT0FZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDQwNjA1CWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjEuMS4xCnhWTjVPTGpWN3FnS2tCUWV2dmJTQUFwc0NSTHhVeUZpWVVMOXJwemprcHBoTlpKWWxmUkQvYndPSmladnh1cFNJL1prc21JUmtWTTBLK1IxcDY0SEJBPT0K",
-      "url": "https://skriblio.com/desk/1.1.1/Skriblio_1.1.1_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOVQ5cGE4cEJ2MTVHWno5Q1pjZ2dsb3dUdzlQUVY4d251WHMwVWlOajUzY0N5cmgrQXJjckZVdUtPTVFoZzVvV1ZWOWVpa25SU25lb0VaVnlkZDhwelF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjY1ODgxCWZpbGU6U2tyaWJsaW8uYXBwLnRhci5negl2ZXJzaW9uOjEuMS4yCmNBQ2M4TXlMV3d3UjVBN3dxU2xSeDNsZWFrbWtyNDBQU2lJVlJPWGtmamVyVTNEU0dnRy9GTWhMTE1DZkpTVER0MU1lU29jL3lZU25XMXZKemlBekF3PT0K",
+      "url": "https://skriblio.com/desk/1.1.2/Skriblio_1.1.2_universal.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWJRQ2lmTStQcm1LWEdqcnBVOW82aG04Q012RTM0TWJ1SXZNUHhDV29SdXJjVE0vd2syYkREMitadWFwaGdSSXUxTVhqNHJ3QTQ4ODY1V3I2TmdSalFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDM5NzE3CWZpbGU6U2tyaWJsaW9fMS4xLjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMS4xCjBCbWgvMWE3MFdoRjgvZDFpWmc4MTlFNXNFYW02MExQencvVE9QbGRUVWJzbERrTmpZc1FrVUdweERLbVJmNkoxaHAyQ3NOTVZveENza2xZbXc5ekFnPT0K",
-      "url": "https://skriblio.com/desk/1.1.1/Skriblio_1.1.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRmVjcDl0WlZnOWZXb0JGcXdrNkw3UWgzcFl4Y3NUMzBYUHlPcXN4YVFrSDdSM2c2amtIUFZsd2RUZVp6VURBYVluM1o3TkMyK3g5ZHlaSTBodmhqVnE0WUdFT2sxYXdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjY2NDM2CWZpbGU6U2tyaWJsaW9fMS4xLjJfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMS4yCmxqWnZHR3EyTVNRVnIwMFBiMkdEN3NvTlAyMjdZYi9hR0ovT1prMXo2M2ZPSzdMWG5TU1NxZHp4WUkrczNnQlBkRlo1dmhNRDh1TCtXbXB6dVpra0FnPT0K",
+      "url": "https://skriblio.com/desk/1.1.2/Skriblio_1.1.2_x64-setup.exe"
     }
   }
 }
